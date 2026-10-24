@@ -1,7 +1,7 @@
 # =====================================================
 #  world.py — мир игры: карта, земля, дома, машины, деревья, фонари,
 #  туман, свет и луч фонарика.
-#  Сама карта лежит в файле data/map.txt.
+#  Карты Tiled загружает tiled_map.py; старые функции карт нужны только мигратору.
 # =====================================================
 
 import os
@@ -29,7 +29,7 @@ def fence_is_horizontal(rows, x, y):
     return not is_fence(x, y - 1) and not is_fence(x, y + 1)
 
 
-# ---------- ЗАГРУЗКА КАРТЫ ----------
+# ---------- LEGACY: ONLY FOR tools/migrate_tiled.py AND PARITY TESTS ----------
 def read_map_file(file_name):
     """Читает карту из файла в папке data. Строки, которые начинаются с //, пропускаем."""
     path = os.path.join(DATA_DIR, file_name)
@@ -543,7 +543,7 @@ def make_bus_stop(w):
 def draw_fog_clouds(surf, clouds, cam_x, cam_y, t):
     """Картинка-узор с клочьями тумана повторяется плиткой по всему экрану и медленно едет.
     Два слоя с разной скоростью — так туман выглядит объёмнее."""
-    w, h = clouds.get_size()
+    w, h = (v // ART_SCALE for v in clouds.get_size())
     sx, sy = FOG_CLOUDS_SPEED
     # (скорость слоя, насколько он "ближе" к камере, сдвиг узора — чтобы слои не совпадали)
     for speed, depth, shift in ((1.0, 1.0, 0), (0.6, 1.2, 90)):

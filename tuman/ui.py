@@ -74,11 +74,11 @@ INV_SLOTS = 6            # сколько клеточек показывать 
 
 
 def load_item_icons():
-    """Иконки для инвентаря: data/items/<имя>_icon.png (16x16), увеличенные в 4 раза."""
+    """Нативные иконки 32x32, показанные в слотах интерфейса размером 64x64."""
     icons = {}
     for name in ITEMS:
         img = item_image(name + "_icon")
-        icons[name] = pygame.transform.scale(img, (img.get_width() * 4, img.get_height() * 4))
+        icons[name] = pygame.transform.scale(img, (64, 64))
     return icons
 
 

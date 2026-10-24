@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+dist.zip
+.pytest_cache/
+*.tiled-session

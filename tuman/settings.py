@@ -5,16 +5,19 @@
 
 import os
 
-# Папка с картой и картинками (data рядом с этим файлом)
+# Ресурсы игры. Активные карты Tiled: data/maps/*.tmj.
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
-TILE = 16                      # размер одной клетки карты в пикселях
+TILE = 16                      # размер клетки в логических единицах физики
+ART_SCALE = 2                  # 32px art tiles; physics remain in 16-unit world cells.
 WIN_W, WIN_H = 960, 540        # размер окна игры на экране
 FULLSCREEN = True              # True — игра запускается на весь экран, False — в окне (F11 — переключить)
 PIXEL_PERFECT = True           # True — все пиксели одинаковые (по краям могут быть чёрные полосы пошире)
 ZOOM = 3                       # приближение камеры: 2 — далеко, 3 — средне, 4 — близко
 GAME_W, GAME_H = WIN_W // ZOOM, WIN_H // ZOOM   # сколько пикселей мира видно (считается само)
 FPS = 60
+SOFT_BLUR = .10               # subtle lens softness; 0 disables
+MOTION_BLUR = .12             # two-frame, camera-aligned motion trace; 0 disables
 PLAYER_SPEED = 55              # скорость героя (пикселей в секунду)
 RUN_SPEED = 90                 # скорость бега (Shift)
 STAMINA_DRAIN = 0.35           # сколько выносливости тратится за секунду бега (1 — вся полоска)

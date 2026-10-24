@@ -1,0 +1,3 @@
+# Only needed for the offline art-authoring scripts, not to play/build the game.
+-r requirements.txt
+Pillow>=10,<13

@@ -1,0 +1,1801 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "orthogonal",
+  "renderorder": "right-down",
+  "infinite": false,
+  "width": 16,
+  "height": 12,
+  "tilewidth": 32,
+  "tileheight": 32,
+  "nextlayerid": 9,
+  "nextobjectid": 108,
+  "properties": [
+    {
+      "name": "inside",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "world_life_version",
+      "type": "int",
+      "value": 1
+    }
+  ],
+  "layers": [
+    {
+      "id": 1,
+      "name": "Ground and buildings",
+      "type": "tilelayer",
+      "width": 16,
+      "height": 12,
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true,
+      "data": [
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2129,
+        2130,
+        2131,
+        2132,
+        2133,
+        2134,
+        2135,
+        2136,
+        2136,
+        2137,
+        2138,
+        2139,
+        2136,
+        2136,
+        2128,
+        2128,
+        2140,
+        2141,
+        2142,
+        2143,
+        2144,
+        2145,
+        2146,
+        2147,
+        2148,
+        2149,
+        2150,
+        2151,
+        2152,
+        2153,
+        2128,
+        2128,
+        2154,
+        2155,
+        2156,
+        2157,
+        2158,
+        2159,
+        2160,
+        2161,
+        2162,
+        2163,
+        2164,
+        2165,
+        2166,
+        2167,
+        2128,
+        2128,
+        2168,
+        2169,
+        2170,
+        2171,
+        2172,
+        2173,
+        2174,
+        2175,
+        2176,
+        2177,
+        2178,
+        2179,
+        2180,
+        2181,
+        2128,
+        2128,
+        2182,
+        2183,
+        2184,
+        2185,
+        2186,
+        2187,
+        2188,
+        2189,
+        2190,
+        2191,
+        2192,
+        2193,
+        2194,
+        2195,
+        2128,
+        2128,
+        2196,
+        2197,
+        2198,
+        2199,
+        2200,
+        2201,
+        2202,
+        2203,
+        2204,
+        2205,
+        2206,
+        2207,
+        2208,
+        2209,
+        2128,
+        2128,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218,
+        2219,
+        2220,
+        2221,
+        2222,
+        2223,
+        2128,
+        2128,
+        2224,
+        2225,
+        2226,
+        2227,
+        2228,
+        2229,
+        2230,
+        2231,
+        2232,
+        2233,
+        2234,
+        2235,
+        2236,
+        2237,
+        2128,
+        2128,
+        2238,
+        2239,
+        2240,
+        2241,
+        2242,
+        2243,
+        2244,
+        2245,
+        2246,
+        2247,
+        2248,
+        2249,
+        2250,
+        2251,
+        2128,
+        2128,
+        2252,
+        2253,
+        2254,
+        2255,
+        2256,
+        2257,
+        2258,
+        2259,
+        2260,
+        2261,
+        2262,
+        2263,
+        2264,
+        2265,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2266,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128,
+        2128
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Decor",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "color": "#ffffff",
+      "objects": [
+        {
+          "id": 1,
+          "name": "scenery",
+          "type": "",
+          "rotation": 0,
+          "visible": true,
+          "x": 320,
+          "y": 288,
+          "width": 96,
+          "height": 40,
+          "properties": [],
+          "gid": 2277
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Collisions",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "color": "#ff4444",
+      "objects": [
+        {
+          "id": 2,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 3,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 32,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 4,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 64,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 5,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 96,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 6,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 128,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 7,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 160,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 8,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 192,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 9,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 224,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 10,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 256,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 11,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 288,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 12,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 320,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 13,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 352,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 14,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 384,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 15,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 416,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 16,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 448,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 17,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 18,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 19,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 32,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 20,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 64,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 21,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 96,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 22,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 128,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 23,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 160,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 24,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 192,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 25,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 224,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 26,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 256,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 27,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 288,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 28,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 320,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 29,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 352,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 30,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 384,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 31,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 416,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 32,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 448,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 33,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 34,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 35,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 32,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 36,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 64,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 37,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 96,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 38,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 39,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 40,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 41,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 42,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 64,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 43,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 96,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 44,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 128,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 45,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 160,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 46,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 256,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 47,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 288,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 48,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 320,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 49,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 352,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 50,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 51,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 160,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 52,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 160,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 53,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 54,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 64,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 55,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 96,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 56,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 128,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 57,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 160,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 58,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 256,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 59,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 288,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 60,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 320,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 61,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 352,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 62,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 63,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 64,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 65,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 66,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 320,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 67,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 352,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 68,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 384,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 69,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 70,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 71,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 72,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 73,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 74,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 0,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 75,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 32,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 76,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 64,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 77,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 96,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 78,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 128,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 79,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 160,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 80,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 192,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 81,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 224,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 82,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 256,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 83,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 288,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 84,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 320,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 85,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 352,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 86,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 384,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 87,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 416,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 88,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 448,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        },
+        {
+          "id": 89,
+          "name": "collision",
+          "type": "collision",
+          "rotation": 0,
+          "visible": true,
+          "x": 480,
+          "y": 352,
+          "width": 32,
+          "height": 32,
+          "properties": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Spawns",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "color": "#44dd88",
+      "objects": [
+        {
+          "id": 90,
+          "name": "entry",
+          "type": "spawn",
+          "rotation": 0,
+          "visible": true,
+          "x": 232,
+          "y": 336,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": []
+        },
+        {
+          "id": 92,
+          "name": "monster_1",
+          "type": "monster",
+          "rotation": 0,
+          "visible": true,
+          "x": 424,
+          "y": 112,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Doors",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "color": "#55aaff",
+      "objects": [
+        {
+          "id": 91,
+          "name": "door",
+          "type": "door",
+          "rotation": 0,
+          "visible": true,
+          "x": 224,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "properties": [
+            {
+              "name": "target",
+              "type": "string",
+              "value": "street"
+            },
+            {
+              "name": "spawn",
+              "type": "string",
+              "value": "from_shop"
+            },
+            {
+              "name": "facing",
+              "type": "string",
+              "value": "down"
+            },
+            {
+              "name": "hint",
+              "type": "string",
+              "value": "[E] выйти на улицу"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Items",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "color": "#ffdd55",
+      "objects": []
+    },
+    {
+      "id": 7,
+      "name": "Lights",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "color": "#ffff88",
+      "objects": [
+        {
+          "id": 93,
+          "name": "lamp_broken",
+          "type": "light",
+          "rotation": 0,
+          "visible": true,
+          "x": 272,
+          "y": 112,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "lamp_broken"
+            }
+          ]
+        },
+        {
+          "id": 94,
+          "name": "lamp_broken",
+          "type": "light",
+          "rotation": 0,
+          "visible": true,
+          "x": 80,
+          "y": 272,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "lamp_broken"
+            }
+          ]
+        },
+        {
+          "id": 95,
+          "name": "booth",
+          "type": "light",
+          "rotation": 0,
+          "visible": true,
+          "x": 390,
+          "y": 252,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "booth"
+            }
+          ]
+        },
+        {
+          "id": 96,
+          "name": "fridge",
+          "type": "light",
+          "rotation": 0,
+          "visible": true,
+          "x": 48,
+          "y": 70,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "fridge"
+            }
+          ]
+        },
+        {
+          "id": 97,
+          "name": "fridge",
+          "type": "light",
+          "rotation": 0,
+          "visible": true,
+          "x": 80,
+          "y": 70,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "fridge"
+            }
+          ]
+        },
+        {
+          "id": 98,
+          "name": "fridge",
+          "type": "light",
+          "rotation": 0,
+          "visible": true,
+          "x": 112,
+          "y": 70,
+          "width": 0,
+          "height": 0,
+          "point": true,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "fridge"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Story",
+      "type": "objectgroup",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "color": "#cc88ff",
+      "objects": [
+        {
+          "id": 99,
+          "name": "shelf_1",
+          "type": "spot",
+          "rotation": 0,
+          "visible": true,
+          "x": 48,
+          "y": 112,
+          "width": 160,
+          "height": 64,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "shelf"
+            },
+            {
+              "name": "approach",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "inspect",
+              "type": "string",
+              "value": "[\"Консервы. Срок годности истёк десять лет назад.\", \"На одной банке детский рисунок вместо этикетки. Тот же дом у воды.\"]"
+            }
+          ]
+        },
+        {
+          "id": 100,
+          "name": "shelf_2",
+          "type": "spot",
+          "rotation": 0,
+          "visible": true,
+          "x": 240,
+          "y": 112,
+          "width": 160,
+          "height": 64,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "shelf"
+            },
+            {
+              "name": "approach",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "inspect",
+              "type": "string",
+              "value": "[\"Полки в пыли. Кроме одного места — отсюда что-то взяли совсем недавно.\"]"
+            }
+          ]
+        },
+        {
+          "id": 101,
+          "name": "shelf_3",
+          "type": "spot",
+          "rotation": 0,
+          "visible": true,
+          "x": 48,
+          "y": 176,
+          "width": 160,
+          "height": 64,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "shelf"
+            },
+            {
+              "name": "approach",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "inspect",
+              "type": "string",
+              "value": "[\"Пакеты с крупой прогрызены. Но мышей здесь не слышно. Вообще ничего не слышно.\"]"
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "name": "shelf_4",
+          "type": "spot",
+          "rotation": 0,
+          "visible": true,
+          "x": 240,
+          "y": 176,
+          "width": 160,
+          "height": 64,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "shelf"
+            },
+            {
+              "name": "approach",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "inspect",
+              "type": "string",
+              "value": "[\"Игрушки. Резиновая уточка... У брата была точно такая же.\", \"Я взял её в руки. Она мокрая.\"]"
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "name": "counter_5",
+          "type": "spot",
+          "rotation": 0,
+          "visible": true,
+          "x": 304,
+          "y": 240,
+          "width": 128,
+          "height": 64,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "counter"
+            },
+            {
+              "name": "approach",
+              "type": "string",
+              "value": "Касса ещё включена."
+            },
+            {
+              "name": "inspect",
+              "type": "string",
+              "value": "[\"На экране последняя покупка: «Батарейки — 2 шт.». Дата стёрта.\", \"В ящике кассы ни денег, ни чеков. Только мокрый песок.\"]"
+            }
+          ]
+        },
+        {
+          "id": 104,
+          "name": "fridge_6",
+          "type": "spot",
+          "rotation": 0,
+          "visible": true,
+          "x": 24,
+          "y": 40,
+          "width": 112,
+          "height": 80,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "fridge"
+            },
+            {
+              "name": "approach",
+              "type": "string",
+              "value": "Холодильники гудят. Единственный звук здесь, кроме моих шагов."
+            },
+            {
+              "name": "inspect",
+              "type": "string",
+              "value": "[\"Бутылки с водой. Все пустые, но крышки закручены.\", \"На стекле изнутри отпечаток ладони. Маленькой.\"]"
+            }
+          ]
+        },
+        {
+          "id": 105,
+          "name": "back_door_7",
+          "type": "spot",
+          "rotation": 0,
+          "visible": true,
+          "x": 344,
+          "y": 64,
+          "width": 48,
+          "height": 28,
+          "properties": [
+            {
+              "name": "kind",
+              "type": "string",
+              "value": "back_door"
+            },
+            {
+              "name": "approach",
+              "type": "string",
+              "value": "Дверь в подсобку. «Только для персонала»."
+            },
+            {
+              "name": "inspect",
+              "type": "string",
+              "value": "[\"Заперто. Изнутри что-то скребётся... и затихает, когда я прислушиваюсь.\", \"Ключа нет. Может, он где-то в посёлке.\"]"
+            }
+          ]
+        },
+        {
+          "id": 106,
+          "name": "remark",
+          "type": "remark",
+          "rotation": 0,
+          "visible": true,
+          "x": 32,
+          "y": 288,
+          "width": 448,
+          "height": 64,
+          "properties": [
+            {
+              "name": "text",
+              "type": "string",
+              "value": "Внутри пахнет пылью и прокисшим молоком. И ещё чем-то... сладковатым."
+            }
+          ]
+        },
+        {
+          "id": 107,
+          "name": "remark",
+          "type": "remark",
+          "rotation": 0,
+          "visible": true,
+          "x": 288,
+          "y": 64,
+          "width": 192,
+          "height": 64,
+          "properties": [
+            {
+              "name": "text",
+              "type": "string",
+              "value": "Здесь холоднее. Будто сквозняк тянет из-за той двери."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "tilesets/world.tsj"
+    },
+    {
+      "firstgid": 2267,
+      "source": "tilesets/decor.tsj"
+    },
+    {
+      "firstgid": 2278,
+      "source": "tilesets/terrain.tsj"
+    },
+    {
+      "firstgid": 2296,
+      "source": "tilesets/objects.tsj"
+    }
+  ]
+}

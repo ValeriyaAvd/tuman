@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "scale": 2,
+  "tile_pixels": 32,
+  "hero_frame": [
+    24,
+    38
+  ],
+  "monster_frame": [
+    24,
+    40
+  ],
+  "source": "art_source/v1",
+  "environment": "Native procedural material detail and terrain redraw",
+  "characters_items": "ImageGen sheets, fitted to production frame grids"
+}
