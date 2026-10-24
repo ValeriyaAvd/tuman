@@ -61,9 +61,9 @@ def load_map(file_name="map.txt"):
                 walls.append(pygame.Rect(rect.centerx - 3, rect.bottom - 4, 6, 4))
             elif ch == "b":
                 # У куста мешает пройти только его низ — за верхушкой встать можно
-                walls.append(pygame.Rect(rect.x + 3, rect.bottom - 5, 10, 4))            
+                walls.append(pygame.Rect(rect.x + 3, rect.bottom - 5, 10, 4))
             elif ch == "B":
-                pass                                       # остановку обрабатываем ниже, целиком            
+                pass                                       # остановку обрабатываем ниже, целиком
             elif ch == "#" and fence_is_horizontal(rows, x, y):
                 # Через забор не пройти, но можно подойти к нему вплотную и сзади, и спереди
                 walls.append(pygame.Rect(rect.x, rect.bottom - 5, TILE, 4))
@@ -85,6 +85,7 @@ def load_map(file_name="map.txt"):
         walls.append(pygame.Rect(r.x, r.y + 11, r.w, 4))                   # заднее стекло
 
     return rows, walls, player_start, note_rect, monster_starts
+
 
 def find_groups(rows, letter):
     """Находит группы соседних клеток с одной буквой (например, все H одного дома)
@@ -319,6 +320,7 @@ def make_fence():
     img.fill((44, 42, 44), (0, 3, 2, 11))                             # столбик
     return img
 
+
 # ---------- ПОСТРОЙКИ И МАШИНЫ ----------
 def shade(color, k):
     """Делает цвет темнее (k < 1) или светлее (k > 1)."""
@@ -470,6 +472,7 @@ def make_bush(rnd):
         img.set_at((6, 6), (90, 40, 40))                                  # ягодка
     return img
 
+
 # ---------- ВЫСОКИЕ ПРЕДМЕТЫ ----------
 # Деревья, фонари, будка и остановка выше клетки, на которой стоят.
 # Поэтому их рисуем не в общей картинке карты, а отдельно — вместе с героем,
@@ -538,11 +541,11 @@ def make_bus_stop(w):
 
 
 # ---------- ПРЕДМЕТЫ, КОТОРЫЕ МОЖНО ПОДНЯТЬ ----------
-
 # ---------- ПЛЫВУЩИЕ КЛОЧЬЯ ТУМАНА ----------
-def draw_fog_clouds(surf, clouds, cam_x, cam_y, t):
+def draw_fog_clouds(surf, clouds, cam_x, cam_y, t, offset=(0, 0), special_flags=0):
     """Картинка-узор с клочьями тумана повторяется плиткой по всему экрану и медленно едет.
-    Два слоя с разной скоростью — так туман выглядит объёмнее."""
+    Два слоя с разной скоростью — так туман выглядит объёмнее.
+    offset — если рисуем не на весь экран, а на кусочек, который на экране стоит в точке offset."""
     w, h = clouds.get_size()
     sx, sy = FOG_CLOUDS_SPEED
     # (скорость слоя, насколько он "ближе" к камере, сдвиг узора — чтобы слои не совпадали)
@@ -553,7 +556,9 @@ def draw_fog_clouds(surf, clouds, cam_x, cam_y, t):
         oy = round(-cam_y * depth + t * sy * speed + shift) % h
         for x in range(ox - w, GAME_W, w):
             for y in range(oy - h, GAME_H, h):
-                surf.blit(clouds, (x, y))
+                surf.blit(clouds, (x - offset[0], y - offset[1]), special_flags=special_flags)
+
+
 # ---------- КАРТИНКИ ПРЕДМЕТОВ ----------
 _item_images = {}   # уже загруженные картинки, чтобы не читать файл каждый кадр
 
@@ -575,7 +580,7 @@ def item_image(name):
 
 def draw_pipe_item(surf, r):
     """Железная труба на земле."""
-    surf.blit(item_image("pipe_ground"), (r.x, r.y))                                  # ржавчина
+    surf.blit(item_image("pipe_ground"), (r.x, r.y))
 
 
 def draw_glint(surf, x, y, time_total):
@@ -630,6 +635,7 @@ def make_counter(rect, rnd, glows):
         img.fill((200, 196, 186), (rnd.randrange(c.x + 2, c.right - 22), c.y + rnd.randint(1, 3), 3, 2))
     return img
 
+
 def draw_fridge(surf, rect, rnd, glows):
     """Холодильники со стеклянными дверцами и холодным светом. Они выше клетки — заходят на стену."""
     body = pygame.Rect(rect.x, rect.y - 10, rect.w, rect.h + 10)
@@ -680,7 +686,7 @@ def build_world(rows):
 
     lamp_pool = make_glow(26, (46, 40, 22))       # светлое пятно на земле под фонарём
     fence_img = make_fence()                      # кусок забора (один на все клетки)
-    
+
     for y, row in enumerate(rows):
         for x, ch in enumerate(row):
             r = pygame.Rect(x * TILE, y * TILE, TILE, TILE)
@@ -694,7 +700,7 @@ def build_world(rows):
                 img = make_tree(rnd)
                 props.append((r.bottom, img, r.centerx - 14, r.bottom - 32))
             elif ch == "#" and fence_is_horizontal(rows, x, y):
-                props.append((r.bottom - 3, fence_img, r.x, r.y))            
+                props.append((r.bottom - 3, fence_img, r.x, r.y))
             elif ch in "Ll":
                 broken = ch == "l"
                 if not broken:
@@ -724,7 +730,7 @@ def build_world(rows):
     for rect in find_groups(rows, "B"):
         bench, front = make_bus_stop(rect.w)
         props.append((rect.y + 11, bench, rect.x, rect.bottom - 30))  # скамейка — "линия" у её ножек
-        props.append((rect.bottom, front, rect.x, rect.bottom - 30))  # крыша, стойки и заднее стекло    
+        props.append((rect.bottom, front, rect.x, rect.bottom - 30))  # крыша, стойки и заднее стекло
     for rect in find_groups(rows, "S"):
         draw_shelf(surf, rect, rnd)
     for rect in find_groups(rows, "R"):
@@ -760,14 +766,16 @@ def make_fog(color, clear, full, max_alpha):
 
 # ---------- ФОНАРИК (картинки создаются один раз) ----------
 FLASH_DIRS = {"right": (1, 0), "left": (-1, 0), "down": (0, 1), "up": (0, -1)}
-# Откуда выходит луч относительно центра героя (из руки, а не из ног)
-FLASH_ORIGIN = {"right": (6, -4), "left": (-6, -4), "down": (5, -1), "up": (-6, -7)}
+# Откуда выходит луч относительно центра героя — из стекла фонарика в левой руке
+FLASH_ORIGIN = {"right": (5, -4), "left": (-5, -4), "down": (6, -1), "up": (-7, -7)}
 
 
 def smootherstep(edge0, edge1, x):
     """Как smoothstep, но ещё мягче у краёв — переход совсем незаметный."""
     t = max(0.0, min(1.0, (x - edge0) / (edge1 - edge0)))
     return t * t * t * (t * (t * 6 - 15) + 10)
+
+
 def smoothstep(edge0, edge1, x):
     """Плавный переход: 0, когда x у edge0, и 1, когда x у edge1.
     В отличие от прямой линии, начинается и заканчивается мягко — без заметного "излома"."""
@@ -824,6 +832,117 @@ def make_flashlight(fog_base, color, max_alpha):
                 beam.set_at((R + ox, R + oy), (int(26 * glow), int(25 * glow), int(20 * glow)))
         result[name] = (fog, light, beam)
     return result
+
+
+# ---------- ФОНАРИК НЕ СВЕТИТ СКВОЗЬ ПРЕДМЕТЫ ----------
+# Сколько пикселей луч может пройти "внутрь" предмета, прежде чем упрётся.
+# Так луч освещает переднюю стенку предмета (фасад дома, забор, бок машины), а дальше — тень.
+LIGHT_FREE = 255                    # здесь ничего нет — луч идёт дальше
+LIGHT_PASS = {
+    "C": 6, "c": 6,                 # машины: освещается ближний бок
+    "F": 8,                         # телефонная будка
+    "X": 4,                         # мусорный бак
+    "W": 16, "D": 16, "G": 16,      # стены магазина и двери в них
+    "S": 8, "Q": 8, "R": 8,         # стеллажи, холодильники, прилавок
+}
+FENCE_PASS = 14                     # забор "слева направо": освещается, а за ним — тень
+WALL_PASS = 2                       # заборы столбиком и края карты
+HOUSE_FACADE = {"H": 14, "K": 18}   # дома и магазин: фасад освещается, крыша — нет
+FLASH_RAYS = 48                     # сколько лучей проверяем (больше — точнее, но медленнее)
+
+
+def make_light_grid(rows):
+    """Для каждого пикселя локации запоминаем, сколько луч может в нём пройти (делается один раз).
+    Возвращает (bytearray — числа подряд, строка за строкой; ширина карты в пикселях)."""
+    w, h = len(rows[0]) * TILE, len(rows) * TILE
+    grid = bytearray([LIGHT_FREE]) * (w * h)
+
+    def mark(rect, value):
+        for y in range(max(0, rect.top), min(h, rect.bottom)):
+            start = y * w + max(0, rect.left)
+            end = y * w + min(w, rect.right)
+            grid[start:end] = bytes([value]) * (end - start)
+
+    for y, row in enumerate(rows):
+        for x, ch in enumerate(row):
+            r = pygame.Rect(x * TILE, y * TILE, TILE, TILE)
+            if ch in LIGHT_PASS:
+                mark(r, LIGHT_PASS[ch])
+            elif ch == "#":
+                mark(r, FENCE_PASS if fence_is_horizontal(rows, x, y) else WALL_PASS)
+    for letter, facade in HOUSE_FACADE.items():
+        for r in find_groups(rows, letter):
+            mark(r, 0)                                                         # крыша: свет сразу гаснет
+            mark(pygame.Rect(r.x, r.bottom - facade, r.w, facade), facade + 2)  # фасад освещается
+    return grid, w
+
+
+def flash_reach(light_grid, x, y, angle):
+    """Как далеко пройдёт луч из точки (x, y) под углом angle, пока не упрётся в предмет."""
+    grid, w = light_grid
+    h = len(grid) // w
+    dx, dy = math.cos(angle), math.sin(angle)
+    depth = 0                                     # сколько пикселей луч уже идёт внутри предмета
+    for d in range(3, FLASH_RANGE):
+        px, py = int(x + dx * d), int(y + dy * d)
+        if not (0 <= px < w and 0 <= py < h):
+            return d
+        limit = grid[py * w + px]
+        if limit == LIGHT_FREE:
+            depth = 0
+        else:
+            depth += 1
+            if depth > limit:
+                return d                          # упёрся — дальше тень
+    return FLASH_RANGE
+
+
+def occlude_flashlight(light_grid, fog_base, fog_img, light, beam, hand_x, hand_y, facing, hx, hy):
+    """Обрезает луч фонарика там, где он упирается в предметы. Возвращает новые fog_img, light, beam.
+    hand_x, hand_y — где фонарик на карте; hx, hy — сдвиг руки от центра героя (FLASH_ORIGIN)."""
+    R = FLASH_RANGE
+    dx, dy = FLASH_DIRS[facing]
+    base = math.atan2(dy, dx)
+    spread = math.radians(FLASH_ANGLE + 10)
+
+    # 1. Многоугольник "куда дошёл свет": от руки — к концу каждого луча
+    points = [(R, R)]
+    blocked = False
+    for i in range(FLASH_RAYS + 1):
+        a = base - spread + 2 * spread * i / FLASH_RAYS
+        reach = flash_reach(light_grid, hand_x, hand_y, a)
+        blocked = blocked or reach < R
+        points.append((R + math.cos(a) * reach, R + math.sin(a) * reach))
+    if not blocked:
+        return fog_img, light, beam               # луч ни во что не упёрся — ничего не меняем
+
+    # 2. Маска: белое — свет есть, прозрачное — нет. Размываем, чтобы край тени был мягким
+    lit = pygame.Surface((R * 2, R * 2), pygame.SRCALPHA)
+    pygame.draw.polygon(lit, (255, 255, 255, 255), points)
+    lit = pygame.transform.smoothscale(lit, (R // 2, R // 2))
+    lit = pygame.transform.smoothscale(lit, (R * 2, R * 2))
+    dark = pygame.Surface((R * 2, R * 2), pygame.SRCALPHA)       # обратная маска: 1 - lit
+    dark.fill((255, 255, 255, 255))
+    dark.blit(lit, (0, 0), special_flags=pygame.BLEND_RGBA_SUB)
+
+    # 3. Свет на земле и свечение тумана — только там, куда дошёл луч
+    light = light.copy()
+    light.blit(lit, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+    beam = beam.copy()
+    beam.blit(lit, (0, 0), special_flags=pygame.BLEND_RGB_MULT)
+
+    # 4. Туман: внутри луча — туман с вырезанным конусом, за предметом — обычный туман
+    square = pygame.Rect(GAME_W + hx - R, GAME_H + hy - R, R * 2, R * 2).clip(fog_img.get_rect())
+    part = pygame.Rect(square.x - (GAME_W + hx - R), square.y - (GAME_H + hy - R), square.w, square.h)
+    cone = fog_img.subsurface(square).copy()
+    cone.blit(lit, (0, 0), part, special_flags=pygame.BLEND_RGBA_MULT)
+    plain = fog_base.subsurface(square).copy()
+    plain.blit(dark, (0, 0), part, special_flags=pygame.BLEND_RGBA_MULT)
+    plain.blit(cone, (0, 0), special_flags=pygame.BLEND_RGBA_ADD)      # склеиваем две части
+    fog_img = fog_img.copy()
+    fog_img.fill((0, 0, 0, 0), square)
+    fog_img.blit(plain, square.topleft, special_flags=pygame.BLEND_RGBA_ADD)
+    return fog_img, light, beam
 
 
 # ---------- ТЁМНЫЕ КРАЯ ЭКРАНА (страх) ----------

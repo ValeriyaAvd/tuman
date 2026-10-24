@@ -6,7 +6,7 @@
 
 import pygame
 from settings import *
-from world import load_map, build_world, find_groups, make_fog, make_flashlight
+from world import load_map, build_world, find_groups, make_fog, make_flashlight, make_light_grid
 from characters import Monster
 from story import build_spots, build_remarks
 
@@ -43,6 +43,7 @@ class Location:
         self.inside = inside
         self.rows, self.walls, self.start, self.note_rect, monster_starts = load_map(map_file)
         self.map_surf, self.props, self.glows = build_world(self.rows)
+        self.light_grid = make_light_grid(self.rows)     # где луч фонарика упирается в предметы        
         self.fog, self.flashlight = fogs["inside" if inside else "outside"]
         self.fog_full = FOG_INSIDE_FULL if inside else FOG_FULL   # как далеко видно без фонарика
         self.car_rects = find_groups(self.rows, "C")
