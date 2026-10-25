@@ -18,10 +18,17 @@
 #    characters.py — герой и монстры
 #    sounds.py     — звуки и музыка (загружает файлы из data/sounds)
 #    story.py      — вступление и осмотр предметов
-#    ui.py         — мысли героя, подсказки, записка
-#    data/         — карта (map.txt) и картинки (hero.png, monster.png, exclaim.png)
-#    data/sounds/  — все звуки (.wav / .ogg); список — в СПИСОК_ЗВУКОВ.txt
-#    tools/        — generate_sounds.py: вернуть стандартные звуки (игре не нужен)
+#    ui.py         — мысли героя, подсказки, записка, инвентарь
+#    locations.py  — обнаружение и ленивая загрузка локаций
+#    tiled_map.py  — чтение карт Tiled JSON (.tmj) и тайлсетов (.tsj)
+#    lighting.py   — тени от луча фонарика
+#    atmosphere.py — мигание фонарей, качание деревьев, VHS-помехи
+#    environment.py — лужи с рябью, летящие листья
+#    rendering.py  — холст мира, размытие, тела на земле
+#    data/maps/    — карты, проект Tiled и тайлсеты
+#    data/         — картинки (hero.png, monster.png, exclaim.png)
+#    data/sounds/  — все звуки (.wav / .ogg)
+#    tools/        — проверка карт, превью и генерация звуков (игре не нужны)
 # =====================================================
 
 import sys
@@ -36,6 +43,9 @@ from sounds import *
 from story import *
 from ui import *
 from locations import *
+from rendering import WorldCanvas, hd_effect, LensEffects, draw_ground_corpses
+from atmosphere import TapeDistortion
+from environment import DriftingLeaves
 
 
 # ---------- ОКНО ИГРЫ ----------
@@ -46,18 +56,21 @@ def make_display(fullscreen):
     return pygame.display.set_mode((WIN_W, WIN_H), pygame.RESIZABLE)  # окно можно тянуть мышкой
 
 
-def present(window, display):
+def present(window, display, scene=None):
     """Растягивает холст на всё окно, сохраняя пропорции (по краям — чёрные полосы)."""
     dw, dh = display.get_size()
     if PIXEL_PERFECT:
         # Увеличиваем только в ЦЕЛОЕ число раз (считаем по пикселям игры) —
         # тогда каждый пиксель игры становится одинаковым квадратиком, без "кривизны"
-        k = max(1, int(min(dw / GAME_W, dh / GAME_H)))
-        w, h = GAME_W * k, GAME_H * k
+        base_w, base_h = scene.get_size() if scene is not None else (GAME_W, GAME_H)
+        k = max(1, int(min(dw / base_w, dh / base_h)))
+        w, h = base_w * k, base_h * k
     else:
         scale = min(dw / WIN_W, dh / WIN_H)      # во сколько раз можно увеличить, чтобы влезло
         w, h = int(WIN_W * scale), int(WIN_H * scale)
     display.fill((0, 0, 0))
+    if scene is not None:
+        display.blit(pygame.transform.scale(scene, (w, h)), ((dw - w) // 2, (dh - h) // 2))
     display.blit(pygame.transform.scale(window, (w, h)), ((dw - w) // 2, (dh - h) // 2))
     pygame.display.flip()
 
@@ -116,7 +129,7 @@ def main():
     pygame.init()
     fullscreen = FULLSCREEN
     display = make_display(fullscreen)          # настоящее окно на экране
-    window = pygame.Surface((WIN_W, WIN_H))     # "холст" 960x540: всё рисуем сюда, а потом растягиваем
+    window = pygame.Surface((WIN_W, WIN_H), pygame.SRCALPHA)  # UI overlay, separate from native-resolution world.
     pygame.display.set_caption("Туман — прототип")
     clock = pygame.time.Clock()
     font = pygame.font.SysFont("arial", 22)
@@ -126,7 +139,10 @@ def main():
     intro_font = pygame.font.SysFont("arial", 26, italic=True)
     small_font = pygame.font.SysFont("arial", 18)
 
-    game = pygame.Surface((GAME_W, GAME_H))     # сюда рисуем мир в маленьком разрешении
+    game = WorldCanvas((GAME_W, GAME_H))
+    tape = TapeDistortion(game.surface.get_size())
+    lens = LensEffects()
+    leaves = DriftingLeaves((GAME_W, GAME_H))
 
     # Меню сложности — в самом начале
     if SKIP_MENU:
@@ -137,33 +153,29 @@ def main():
     difficulty = DIFFICULTIES[level]
 
     monster_frames = build_monster_frames()
-    locations = build_locations(monster_frames) # все локации: улица, магазин...
-    for place in locations.values():            # монстры получают здоровье по сложности
-        for m in place.monsters:
-            m.max_hp = difficulty["monster_hp"]
-            m.reset()
-    loc = locations["street"]                   # где сейчас герой
+    locations = build_locations(monster_frames, difficulty)
+    loc = locations[locations.start_name]
     exclaim_img = load_image("exclaim.png")
-    vignette = make_vignette()
-    fog_clouds = load_image("fog_clouds.png")   # клочья тумана, которые медленно плывут
-    fog_clouds.set_alpha(FOG_CLOUDS_ALPHA)
-    car = find_groups(loc.rows, "C")[0]         # машина героя (стоит на улице)
-    door_pos = (car.centerx - 4, car.bottom + 3)  # где герой появляется, выйдя из машины
+    vignette = hd_effect(make_vignette())
+    fog_clouds = hd_effect(load_image("fog_clouds.png"))   # клочья тумана, которые медленно плывут
+    fog_clouds.set_alpha(FOG_CLOUDS_ALPHA)   
+    car = loc.car_rects[0] if loc.car_rects else pygame.Rect(*loc.start, TILE, TILE)
+    door_pos = (car.centerx - 4, car.bottom + 3) if loc.car_rects else loc.start
     hero_frames = build_hero_frames()
-    Player.hd_frames = build_hero_hd_frames() if HERO_HD else None   # детальный герой (если включён)
     player = Player(door_pos, hero_frames, difficulty["hero_hp"])
     player.facing = "down"
     sounds = SoundSystem()
 
     # Свечение, которое видно даже сквозь туман
+    lamp_glow = hd_effect(make_glow(34, (96, 84, 52)))
     glow_images = {
-        "lamp": make_glow(34, (96, 84, 52)),
-        "lamp_broken": make_glow(34, (96, 84, 52)),
-        "window": make_glow(14, (70, 52, 24)),
-        "booth": make_glow(14, (60, 58, 46)),
-        "fridge": make_glow(22, (34, 54, 64)),
+        "lamp": lamp_glow,
+        "lamp_broken": lamp_glow,
+        "window": hd_effect(make_glow(14, (70, 52, 24))),
+        "booth": hd_effect(make_glow(14, (60, 58, 46))),
+        "fridge": hd_effect(make_glow(22, (34, 54, 64))),
+        "flame": hd_effect(make_glow(42, (120, 58, 17))),
     }
-    flicker = random.Random()
 
     reading = False      # открыта ли записка
     inventory = []                  # подобранные предметы (по порядку): "flashlight", "pipe", "note"...
@@ -174,14 +186,12 @@ def main():
     picture_next = None             # картинка, которую откроет следующее нажатие E
     picture_spot = None             # у какого места эта картинка (открыть её можно только там)
     picture_guard = 0.0             # первые полсекунды картинку нельзя закрыть (чтобы не закрыть случайно)
-    item_icons = load_item_icons()
+    item_icons = load_item_icons()   
     time_total = 0.0
     broken_on = True     # горит ли сейчас сломанный фонарь
-    flicker_timer = 0.0
     dead = False         # погиб ли герой
     dead_timer = 0.0     # сколько секунд прошло после смерти
     radio = 0.0          # сила помех радио: 0 — тихо, 1 — монстр вплотную
-    noise_rnd = random.Random()
     has_flashlight = False   # нашёл ли герой фонарик
     flash_on = False         # включён ли он
     thought = INTRO_THOUGHT  # мысль героя внизу экрана
@@ -189,7 +199,7 @@ def main():
     intro = Intro()
     hero_visible = False     # пока герой в машине, его не видно
     focus_blend = 0.0        # камера: 0 — смотрит на машину, 1 — на героя
-    if SKIP_INTRO:
+    if SKIP_INTRO or not loc.car_rects:
         intro.phase = "done"
         hero_visible = True
         focus_blend = 1.0
@@ -198,7 +208,7 @@ def main():
     freeze_timer = 0.0       # сколько ещё секунд герой стоит в оцепенении
     exclaim_timer = 0.0      # сколько ещё показывать "!" над головой
     shake_timer = 0.0        # сколько ещё трясётся камера
-    hurt_flash = 0.0         # красная вспышка, когда монстр ранил героя (1 — ярко, 0 — нет)
+    hurt_flash = 0.0         # красная вспышка, когда монстр ранил героя (1 — ярко, 0 — нет)   
     fear = 0.0               # страх: 0 — спокойно, 1 — монстр вплотную
     heart_timer = 0.0        # через сколько секунд следующий удар сердца
     heart_pulse = 0.0        # вспышка тёмных краёв в такт сердцу
@@ -214,21 +224,12 @@ def main():
 
     while True:
         dt = clock.tick(FPS) / 1000      # сколько секунд прошло с прошлого кадра
-
-        # Данные текущей локации — под короткими именами, чтобы остальной код не менять
-        rows, walls, note_rect = loc.rows, loc.walls, loc.note_rect
-        map_surf, props, glows = loc.map_surf, loc.props, loc.glows
-        map_w, map_h = map_surf.get_size()
-        fog, flashlight = loc.fog, loc.flashlight
-        car_rects, spots, remarks, monsters = loc.car_rects, loc.spots, loc.remarks, loc.monsters
-        if not has_weapon:
-            monsters = []                # монстры появляются, только когда у героя есть оружие
         time_total += dt
 
         # --- 1. События (нажатия клавиш, закрытие окна) ---
         playing = intro.phase == "done"     # вступление закончилось — можно управлять героем
-        near_note = playing and note_rect is not None and player.rect.inflate(26, 26).colliderect(note_rect)
-        near_car = playing and not has_flashlight and any(player.rect.inflate(20, 20).colliderect(c) for c in car_rects)
+        near_note = playing and loc.note_rect is not None and player.rect.inflate(26, 26).colliderect(loc.note_rect)
+        near_car = playing and not has_flashlight and any(player.rect.inflate(20, 20).colliderect(c) for c in loc.car_rects)
         near_pipe = playing and not has_weapon and any(player.rect.inflate(20, 20).colliderect(p) for p in loc.pipe_rects)
         # Рядом с дверью?
         near_door = None
@@ -239,7 +240,7 @@ def main():
         # Что можно осмотреть прямо сейчас (если рядом нет записки, машины с фонариком и двери)
         near_spot = None
         if playing and not near_note and not near_car and not near_door and not near_pipe and not dead:
-            for spot in spots:
+            for spot in loc.spots:
                 if spot.kind == "my_car" and not has_flashlight:
                     continue
                 if player.rect.colliderect(spot.zone):
@@ -292,32 +293,9 @@ def main():
                     inv_choice = min(inv_choice, max(0, len(inventory) - 1))
                     continue
 
-                if event.key == pygame.K_ESCAPE:
-                    if reading:
-                        reading = False
-                        if reading_from_inventory:     # читали из инвентаря — возвращаемся туда
-                            reading_from_inventory = False
-                            inventory_open = True
-                        else:
-                            thought = NOTE_THOUGHT
-                            thought_timer = thought_time(thought)
-                            hint = NOTE_TAKEN_HINT
-                            hint_timer = 5.0
-                    else:
-                        pygame.quit()
-                        sys.exit()
-                if event.key == pygame.K_r and dead:
-                    # Начать заново: герой возвращается на улицу, монстры — на свои места
-                    loc = locations["street"]
-                    player = Player(loc.start, hero_frames, difficulty["hero_hp"])
-                    for place in locations.values():
-                        for m in place.monsters:
-                            m.reset()
-                    dead = False
-                    dead_timer = 0.0
-                    freeze_timer = exclaim_timer = shake_timer = fear = hurt_flash = 0.0
-                if event.key == pygame.K_e and not dead:
-                    if reading:
+                # --- Записка открыта: E или Esc закрывают её ---
+                if reading:
+                    if event.key in (pygame.K_e, pygame.K_ESCAPE):
                         reading = False
                         if reading_from_inventory:     # читали из инвентаря — возвращаемся туда
                             reading_from_inventory = False
@@ -327,21 +305,35 @@ def main():
                             thought_timer = thought_time(thought)
                             hint = NOTE_TAKEN_HINT
                             hint_timer = 5.0
-                    elif near_door:
+                    continue                           # пока читаем, остальные клавиши не работают
+
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    sys.exit()
+                if event.key == pygame.K_r and dead:
+                    # Начать заново: герой возвращается на улицу, монстры — на свои места
+                    loc = locations[locations.start_name]
+                    player = Player(loc.start, hero_frames, difficulty["hero_hp"])
+                    for place in locations.loaded.values():
+                        for m in place.monsters:
+                            m.reset()
+                    dead = False
+                    dead_timer = 0.0
+                    freeze_timer = exclaim_timer = shake_timer = fear = hurt_flash = 0.0
+                if event.key == pygame.K_e and not dead:
+                    if near_door:
                         # Переход в другую локацию
                         sounds.car("door_open")
-                        loc = locations[near_door.target]
+                        loc, arrival = locations.enter(near_door)
                         old_player = player            # здоровье переносим в новую локацию
-                        player = Player(near_door.arrive, hero_frames, old_player.max_hp)
+                        player = Player(arrival, hero_frames, old_player.max_hp)
                         player.hp = old_player.hp
                         player.facing = near_door.facing
-                        for m in loc.monsters:
-                            if not m.dead:
-                                m.reset()              # живые монстры в новой локации — на своих местах
+                        # Cached locations retain monster and story state between visits.
                         door_fade = 1.0
                     elif near_pipe:
                         has_weapon = True              # с этого момента появляются монстры
-                        inventory.append("pipe")
+                        inventory.append("pipe")                        
                         sounds.pickup()
                         thought = PIPE_THOUGHT
                         thought_timer = thought_time(thought)
@@ -354,7 +346,7 @@ def main():
                         inventory.append("note")       # ...и попадает в инвентарь
                     elif near_car:
                         has_flashlight = True
-                        inventory.append("flashlight")
+                        inventory.append("flashlight")                        
                         sounds.switch()
                         thought = FLASHLIGHT_THOUGHT
                         thought_timer = thought_time(thought)
@@ -374,22 +366,22 @@ def main():
                         index = min(near_spot.times, len(near_spot.inspect)) - 1
                         picture_next = SPOT_PICTURES.get((near_spot.kind, index))
                         picture_spot = near_spot
-                if event.key == pygame.K_SPACE and has_weapon and not dead and not reading and attack_cooldown <= 0:
+                if event.key == pygame.K_SPACE and has_weapon and not dead and attack_cooldown <= 0:
                     swing_timer = SWING_TIME           # начинаем замах
                     attack_cooldown = ATTACK_COOLDOWN
                     hit_done = False
                     sounds.swing()
-                if event.key == pygame.K_f and has_flashlight and not dead and not reading:
+                if event.key == pygame.K_f and has_flashlight and not dead:
                     flash_on = not flash_on
                     sounds.switch()
 
-        # Ещё раз берём данные локации: если в этом кадре герой прошёл через дверь
-        # (или начал заново), локация уже другая — и дальше всё должно браться из неё
+        # Данные текущей локации — под короткими именами. Берём их после событий:
+        # если в этом кадре герой прошёл через дверь (или начал заново), локация уже другая
         rows, walls, note_rect = loc.rows, loc.walls, loc.note_rect
-        map_surf, props, glows = loc.map_surf, loc.props, loc.glows
-        map_w, map_h = map_surf.get_size()
+        map_surf, glows = loc.map_surf, loc.glows
+        map_w, map_h = (v // ART_SCALE for v in map_surf.get_size())
         fog, flashlight = loc.fog, loc.flashlight
-        car_rects, spots, remarks, monsters = loc.car_rects, loc.spots, loc.remarks, loc.monsters
+        spots, remarks, monsters = loc.spots, loc.remarks, loc.monsters
         if not has_weapon:
             monsters = []                # монстры появляются, только когда у героя есть оружие
 
@@ -410,7 +402,7 @@ def main():
             sounds.engine(intro.engine_level())
         elif dead:
             dead_timer += dt
-        elif not reading and not inventory_open and not picture:   # записка, инвентарь или картинка — пауза
+        elif not reading and not inventory_open and not picture:     # записка или инвентарь — игра на паузе
             # Герой сам говорит, когда впервые подходит к чему-то интересному.
             # Только если сейчас он ничего не говорит — чтобы фразы не перебивали друг друга.
             if thought_timer < 0.5:
@@ -428,28 +420,17 @@ def main():
                             thought_timer = thought_time(thought)
                             break
 
-            # Тела убитых монстров — тоже препятствия. Тело становится твёрдым только когда
-            # герой из него вышел: иначе, если монстр упал прямо на героя, тот бы застрял
-            solid = list(walls)
-            for m in monsters:
-                if m.dead:
-                    body = m.corpse_rect()
-                    if not m.corpse_solid and not player.rect.colliderect(body):
-                        m.corpse_solid = True
-                    if m.corpse_solid:
-                        solid.append(body)
-
             if freeze_timer > 0:
                 freeze_timer -= dt                 # герой замер от ужаса — управлять нельзя
                 player.moving = False
                 player.stepped = False
                 player.walk_time = 0.0
             else:
-                player.update(dt, pygame.key.get_pressed(), solid)
+                player.update(dt, pygame.key.get_pressed(), walls)
             if player.stepped:
                 # На какой клетке стоит герой — от этого зависит звук шага
                 tile = rows[player.rect.centery // TILE][player.rect.centerx // TILE]
-                if tile == "~":
+                if loc.water.at(player.rect.center) is not None or tile == "~":
                     sounds.footstep("water")
                 elif tile in GRASS_TILES:
                     sounds.footstep("soft")
@@ -516,7 +497,7 @@ def main():
                     else:
                         # Ранен, но жив: героя отбрасывает, монстр на миг замирает
                         player.hurt = HURT_TIME
-                        player.knockback(m.rect.centerx, m.rect.centery, solid)
+                        player.knockback(m.rect.centerx, m.rect.centery, walls)
                         m.stun = 0.5
                         sounds.shock()
                         shake_timer = max(shake_timer, 0.25)
@@ -542,6 +523,11 @@ def main():
                     heart_timer = 1.1 - 0.65 * fear        # от ~1 удара в секунду до ~2
             else:
                 heart_timer = 0.0
+        if hurt_flash > 0:                       # красная вспышка: героя ранили
+            red = pygame.Surface((WIN_W, WIN_H), pygame.SRCALPHA)
+            red.fill((120, 0, 0, int(110 * hurt_flash)))
+            window.blit(red, (0, 0))
+            hurt_flash -= dt * 2.5        
         if dead:
             radio = 0.0
             fear = 0.0
@@ -552,15 +538,9 @@ def main():
         sounds.radio(radio)
         sounds.music(dt, radio, dead or intro.phase == "text")
 
-        # Сломанный фонарь то гаснет, то загорается
-        flicker_timer -= dt
-        switched_on = False
-        if flicker_timer <= 0:
-            broken_on = not broken_on
-            switched_on = broken_on
-            flicker_timer = flicker.uniform(0.03, 0.2) if broken_on else flicker.uniform(0.05, 1.2)
-
-        sounds.update(dt, player.rect.centerx, player.rect.centery, glows, broken_on, switched_on)
+        broken_on, switched_on = loc.lamps.update(dt)
+        audible_glows = [g for g in glows if loc.lamps.level_at(*g) > .2]
+        sounds.update(dt, player.rect.centerx, player.rect.centery, audible_glows, broken_on, switched_on)
 
         # Камера: куда смотрим — на машину (во вступлении) или на героя.
         # Когда герой выходит, камера плавно переезжает от машины к нему.
@@ -579,7 +559,13 @@ def main():
         view = pygame.Rect(cam_x - 40, cam_y - 40, GAME_W + 80, GAME_H + 80)
 
         # --- 3. Рисование мира (маленькое разрешение) ---
+        game.fill((8, 8, 10))  # Clear uncovered space when the new map is smaller than the viewport.
         game.blit(map_surf, (-cam_x, -cam_y))
+        active_play = playing and not dead and not reading and not inventory_open and not picture
+        loc.water.update(dt if active_play else 0, player.rect.center, active_play and player.stepped)
+        for _, image, x, y in loc.ground_scenery.props_at(time_total):
+            game.blit(image, (x - cam_x, y - cam_y))
+        loc.water.draw(game, (cam_x, cam_y))
 
         if note_rect:   # записка слегка "мерцает"
             glow = 200 + int(30 * ((time_total * 2) % 1))
@@ -593,41 +579,25 @@ def main():
         player.left_hand = "flashlight" if has_flashlight else None
         player.right_hand = "pipe" if has_weapon else None
         player.light_on = flash_on
-        player.swing = 1 - swing_timer / SWING_TIME if swing_timer > 0 else None
+        player.swing = 1 - swing_timer / SWING_TIME if swing_timer > 0 else None        
         # Высокие предметы, монстры и герой — по порядку сверху вниз:
         # кто ниже на экране (ближе к нам), тот рисуется позже и закрывает остальных
-        to_draw = [(bottom, (img, x, y)) for bottom, img, x, y in props if view.collidepoint(x, y)]
+        animated_props = loc.scenery.props_at(time_total)
+        to_draw = [(bottom, (img, x, y)) for bottom, img, x, y in animated_props
+                   if view.colliderect(pygame.Rect(x, y, img.get_width() / ART_SCALE, img.get_height() / ART_SCALE))]
         if hero_visible:
             to_draw.append((player.rect.bottom, player))
-        for m in monsters:
-            if view.colliderect(m.rect):
-                to_draw.append((m.rect.bottom, m))
+        to_draw.extend(draw_ground_corpses(game, monsters, (cam_x, cam_y), view))
         to_draw.sort(key=lambda item: item[0])
-        # Маска "что стоит перед героем" — нужна только детальному герою
-        front = pygame.Surface((GAME_W, GAME_H), pygame.SRCALPHA) if Player.hd_frames else None
-        hero_drawn = False
         for bottom, thing in to_draw:
-            in_front = front is not None and hero_drawn
             if isinstance(thing, tuple):        # картинка предмета
                 img, x, y = thing
                 game.blit(img, (x - cam_x, y - cam_y))
-                if in_front:
-                    front.blit(img, (x - cam_x, y - cam_y))
-            elif thing is player:
-                player.draw(game, cam_x, cam_y, front)
-                hero_drawn = True
-            else:                               # монстр
+            else:                               # герой или монстр — рисуют себя сами
                 thing.draw(game, cam_x, cam_y)
-                if in_front:
-                    thing.draw(front, cam_x, cam_y)
 
-        clouds = None                           # функция "нарисуй клочья тумана" — пригодится и для героя
         if FOG_CLOUDS and not loc.inside:       # клочья тумана плывут поверх улицы
             draw_fog_clouds(game, fog_clouds, cam_x, cam_y, time_total)
-
-            def clouds(part, offset):
-                draw_fog_clouds(part, fog_clouds, cam_x, cam_y, time_total, offset, pygame.BLEND_RGBA_MAX)
-                part.fill((255, 255, 255, FOG_CLOUDS_ALPHA), special_flags=pygame.BLEND_RGBA_MULT)
 
         # Туман: центр "дырки" ставим на героя (во вступлении — на машину)
         px = focus_x - cam_x
@@ -641,7 +611,6 @@ def main():
             fy = car.centery - cam_y
             game.blit(light, (fx - R, fy - R), special_flags=pygame.BLEND_RGB_ADD)
             game.blit(fog_img, (fx - hx - GAME_W, fy - hy - GAME_H))
-            fog_used = (fog_img, (fx - hx - GAME_W, fy - hy - GAME_H))
             game.blit(beam, (fx - R, fy - R), special_flags=pygame.BLEND_RGB_ADD)
         elif flash_on:
             fog_img, light, beam = flashlight[player.facing]
@@ -655,10 +624,8 @@ def main():
             game.blit(light, (px + hx - R, py + hy - R), special_flags=pygame.BLEND_RGB_ADD)
             game.blit(fog_img, (px - GAME_W, py - GAME_H))
             game.blit(beam, (px + hx - R, py + hy - R), special_flags=pygame.BLEND_RGB_ADD)
-            fog_used = (fog_img, (px - GAME_W, py - GAME_H))
         else:
             game.blit(fog, (px - GAME_W, py - GAME_H))
-            fog_used = (fog, (px - GAME_W, py - GAME_H))
 
         # Искорки над предметами, которые можно поднять, — видны даже сквозь туман.
         # Новый предмет: добавь сюда точку (x, y) на карте, где он лежит, пока его не подняли.
@@ -668,7 +635,7 @@ def main():
                 sparkles.append((r.x + 12, r.y + 4))                # труба
         if note_rect:
             sparkles.append((note_rect.centerx + 2, note_rect.y))   # записка
-        if not has_flashlight and playing and loc is locations["street"]:
+        if playing and not has_flashlight and loc is locations[locations.start_name] and loc.car_rects:
             sparkles.append((car.centerx + 10, car.centery - 4))    # фонарик в машине
         for i, (sx, sy) in enumerate(sparkles):
             # i * 0.37 — чтобы искорки вспыхивали не все разом, а по очереди
@@ -678,10 +645,16 @@ def main():
         for kind, gx, gy in glows:
             if not view.collidepoint(gx, gy):
                 continue
-            if kind == "lamp_broken" and not broken_on:
-                continue
             img = glow_images[kind]
-            half = img.get_width() // 2
+            level = loc.lamps.level_at(kind, gx, gy)
+            if kind == 'flame':
+                level = .82 + .12 * math.sin(time_total * 11 + gx) + .06 * math.sin(time_total * 23 + gy)
+            if level < .01:
+                continue
+            if level < .99:
+                img = img.copy()
+                img.set_alpha(round(255 * level))
+            half = img.get_width() // (2 * ART_SCALE)
             game.blit(img, (gx - half - cam_x, gy - half - cam_y), special_flags=pygame.BLEND_RGB_ADD)
 
         # "!" над головой героя (с маленьким "подпрыгиванием" в начале)
@@ -696,26 +669,21 @@ def main():
             vignette.set_alpha(int(255 * min(1.0, fear * 0.6 + heart_pulse * fear * 0.35)))
             game.blit(vignette, (0, 0))
 
-        # Помехи на экране, когда рядом монстр (как "снег" в старом телевизоре)
-        if radio > 0.01:
-            for _ in range(int(radio * 350)):
-                c = noise_rnd.randint(40, 220)
-                game.set_at((noise_rnd.randrange(GAME_W), noise_rnd.randrange(GAME_H)), (c, c, c))
-            if noise_rnd.random() < radio * 0.3:            # иногда — полоса помех
-                c = noise_rnd.randint(90, 160)
-                game.fill((c, c, c), (0, noise_rnd.randrange(GAME_H), GAME_W, 1))
+        if not loc.inside:
+            leaves.draw(game, (cam_x, cam_y), dt)
+        motion = (1.4 if player.running else 1.0) if active_play and player.moving else 0
+        lens.apply(game.surface, (cam_x, cam_y), loc.name, motion, dt)
+        tape.apply(game.surface, dt, radio if playing and not dead else 0)
 
         # --- 4. Увеличиваем картинку на всё окно ---
-        pygame.transform.scale(game, (WIN_W, WIN_H), window)
-        if hero_visible:                        # детальный герой — уже на большом холсте
-            draw_hero_hd(window, player, game, front, fog_used, clouds)
+        window.fill((0, 0, 0, 0))
 
         # --- 5. Интерфейс (текст рисуем уже в большом разрешении, чтобы был чётким) ---
         # Цвет текста: на светлом тумане — тёмный, в тёмном помещении — светлый
         text_color = (200, 196, 188) if loc.inside else (30, 30, 35)
         if intro.phase == "text":
             intro.draw_text(window, intro_font, small_font)
-            present(window, display)
+            present(window, display, game.surface)
             continue                            # пока идёт текст, больше ничего не рисуем
         if intro.black_alpha() > 0:             # сцена плавно проявляется из темноты
             black = pygame.Surface((WIN_W, WIN_H), pygame.SRCALPHA)
@@ -777,6 +745,7 @@ def main():
 
         if reading:
             draw_note(window, note_font, font)
+
         picture_guard -= dt
         if picture:
             draw_picture(window, font, picture)
@@ -792,12 +761,6 @@ def main():
             window.blit(black, (0, 0))
             door_fade -= dt * 2
 
-        if hurt_flash > 0:                       # красная вспышка: героя ранили
-            red = pygame.Surface((WIN_W, WIN_H), pygame.SRCALPHA)
-            red.fill((120, 0, 0, int(110 * hurt_flash)))
-            window.blit(red, (0, 0))
-            hurt_flash -= dt * 2.5
-
         if dead:
             # Экран постепенно заливается красным
             red = pygame.Surface((WIN_W, WIN_H), pygame.SRCALPHA)
@@ -809,7 +772,7 @@ def main():
                 draw_text(window, font, "[R] — начать заново", (WIN_W // 2, WIN_H // 2 + 40),
                           color=(200, 180, 170), center=True)
 
-        present(window, display)
+        present(window, display, game.surface)
 
 
 if __name__ == "__main__":

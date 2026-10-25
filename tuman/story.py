@@ -3,10 +3,8 @@
 #  (что герой говорит, когда подходит к предметам или осматривает их).
 # =====================================================
 
-import pygame
 from settings import *
 from texts import *
-from world import find_groups
 from ui import draw_text
 
 # ---------- ВСТУПЛЕНИЕ ----------
@@ -118,50 +116,3 @@ class Spot:
         self.times += 1
         self.approach_said = True                    # осмотрел сам — подходить "заново" незачем
         return text
-
-
-def build_spots(rows):
-    """Находит на карте всё, что можно осмотреть, и создаёт для этого Spot."""
-    spots = []
-
-    def texts_for(kind, index):
-        t = SPOT_TEXTS[kind]
-        return t[index % len(t)] if isinstance(t, list) else t   # у домов и машин — список
-
-    for i, r in enumerate(find_groups(rows, "H")):
-        # стоять нужно у двери: она посередине нижней стены
-        spots.append(Spot("house", pygame.Rect(r.centerx - 12, r.bottom - 2, 24, 16), texts_for("house", i)))
-    for i, r in enumerate(find_groups(rows, "K")):
-        spots.append(Spot("shop", pygame.Rect(r.centerx - 16, r.bottom - 2, 32, 16), texts_for("shop", i)))
-    for i, r in enumerate(find_groups(rows, "B")):
-        spots.append(Spot("bus_stop", r.inflate(16, 28), texts_for("bus_stop", i)))
-    for i, r in enumerate(find_groups(rows, "F")):
-        spots.append(Spot("booth", r.inflate(20, 20), texts_for("booth", i)))
-    for i, r in enumerate(find_groups(rows, "c")):
-        spots.append(Spot("wreck", r.inflate(16, 16), texts_for("wreck", i)))
-    for i, r in enumerate(find_groups(rows, "A")):
-        spots.append(Spot("abyss", r.inflate(24, 24), texts_for("abyss", i)))
-    for i, r in enumerate(find_groups(rows, "X")):
-        spots.append(Spot("bin", r.inflate(16, 16), texts_for("bin", i)))
-    for i, r in enumerate(find_groups(rows, "O")):
-        spots.append(Spot("manhole", r.inflate(8, 8), texts_for("manhole", i)))
-    for i, r in enumerate(find_groups(rows, "l")):
-        spots.append(Spot("broken_lamp", r.inflate(18, 18), texts_for("broken_lamp", i)))
-    for i, r in enumerate(find_groups(rows, "C")):
-        spots.append(Spot("my_car", r.inflate(20, 20), texts_for("my_car", i)))
-    for i, r in enumerate(find_groups(rows, "S")):
-        spots.append(Spot("shelf", r.inflate(16, 16), texts_for("shelf", i)))
-    for i, r in enumerate(find_groups(rows, "R")):
-        spots.append(Spot("counter", r.inflate(16, 16), texts_for("counter", i)))
-    for i, r in enumerate(find_groups(rows, "Q")):
-        spots.append(Spot("fridge", r.inflate(8, 24), texts_for("fridge", i)))
-    for i, r in enumerate(find_groups(rows, "G")):
-        # дверь на стене — стоять нужно под ней, на полу
-        spots.append(Spot("back_door", pygame.Rect(r.x - 4, r.bottom, r.w + 8, 14), texts_for("back_door", i)))
-    return spots
-
-
-def build_remarks(location_name):
-    """Зоны из REMARKS для одной локации: [прямоугольник, фраза, уже сказал?]"""
-    return [[pygame.Rect(x * TILE, y * TILE, w * TILE, h * TILE), text, False]
-            for x, y, w, h, text in REMARKS.get(location_name, [])]

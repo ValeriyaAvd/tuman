@@ -62,7 +62,7 @@ class SoundSystem:
         # Звуки, которые играют по кругу всю игру (у каждого свой "канал")
         pygame.mixer.set_num_channels(16)
         pygame.mixer.set_reserved(6)               # каналы 0–5 заняты под эти звуки
-        self.ch_wind = self.start_loop(0, "wind", VOL_WIND)
+        self.start_loop(0, "wind", VOL_WIND)
         self.ch_buzz = self.start_loop(1, "lamp_buzz", 0)
         self.ch_broken = self.start_loop(2, "lamp_buzz", 0)
         self.ch_static = self.start_loop(3, "radio_static", 0)

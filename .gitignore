@@ -1,5 +1,9 @@
 __pycache__/
-*.pyc
-tuman/build/
-tuman/dist/
-tuman/dist.zip
+*.py[cod]
+.venv/
+build/
+dist/
+dist.zip
+.pytest_cache/
+*.tiled-session
+_backup_*/
