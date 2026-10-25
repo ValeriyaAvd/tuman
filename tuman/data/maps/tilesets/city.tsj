@@ -6,7 +6,7 @@
   "tilewidth": 32,
   "tileheight": 56,
   "objectalignment": "bottomleft",
-  "tilecount": 35,
+  "tilecount": 36,
   "tiles": [
     {
       "id": 0,
@@ -471,6 +471,19 @@
           "name": "motion",
           "type": "string",
           "value": "lamp"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "image": "city_fence_post.png",
+      "imagewidth": 4,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 26
         }
       ]
     }

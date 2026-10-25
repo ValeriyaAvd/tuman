@@ -567,9 +567,8 @@ def main():
             game.blit(image, (x - cam_x, y - cam_y))
         loc.water.draw(game, (cam_x, cam_y))
 
-        if note_rect:   # записка слегка "мерцает"
-            glow = 200 + int(30 * ((time_total * 2) % 1))
-            game.fill((glow, glow, glow - 20), note_rect.move(-cam_x, -cam_y))
+        if note_rect:   # записка лежит на земле
+            draw_note_item(game, note_rect.move(-cam_x, -cam_y))
 
         if not has_weapon:                      # труба лежит на земле, пока её не подняли
             for r in loc.pipe_rects:
