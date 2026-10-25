@@ -14,9 +14,13 @@ from world import flash_strength, FLASH_DIRS, item_image
 # hero.png — лист кадров героя: 24x38 пикселей, логический размер 12x19.
 #   1-я строка — идёт вниз, 2-я — вверх, 3-я — вправо (влево — это зеркальное "вправо").
 #   В каждой строке 5 кадров: 1-й — стоит, остальные 4 — шаги по очереди.
+# hero_attack.png — удар трубой: 64x58 пикселей на кадр, строки вниз/вверх/вправо/влево, по 4 кадра
+#   (замах, удар, доводка, рука опускается). Герой стоит в кадре со сдвигом ATTACK_PAD.
 # monster.png — 2 кадра монстра 24x40 (логический размер 12x20).
 HERO_W, HERO_H = 12, 19
 MON_W, MON_H = 12, 20
+ATTACK_W, ATTACK_H = 32, 29
+ATTACK_PAD = (10, 6)          # где в кадре удара левый верхний угол обычной картинки героя
 
 
 def load_image(name):
@@ -43,6 +47,10 @@ def build_hero_frames():
         "stand": flip(frames["right"]["stand"]),
         "walk": [flip(f) for f in frames["right"]["walk"]],
     }
+    attack = cut_frames(load_image("hero_attack.png"), ATTACK_W, ATTACK_H)
+    # Влево — своя строка: труба в правой руке, а она у смотрящего влево героя дальняя
+    for direction, row in zip(("down", "up", "right", "left"), attack):
+        frames[direction]["attack"] = row
     for direction, animation in frames.items():
         stand = animation['stand']
         raised = stand.copy()
@@ -184,7 +192,10 @@ class Player:
 
         # Выбираем нужный кадр: стоит герой или идёт, и куда смотрит
         anim = self.frames[self.facing]
-        if self.moving:
+        attacking = self.right_hand == "pipe" and self.swing is not None
+        if attacking:
+            frame = anim["attack"][attack_frame(self.swing)]
+        elif self.moving:
             walk = anim["walk"]
             frame = walk[int(self.walk_time * 8) % len(walk)]   # 8 кадров в секунду
         else:
@@ -201,22 +212,33 @@ class Player:
 
         # Предметы в руках: то, что в "дальней" руке, рисуем ДО героя (оно за ним),
         # а то, что в "ближней", — ПОСЛЕ (оно поверх героя)
-        behind = HAND_BEHIND[self.facing]
-        hands = (("left", self.left_hand), ("right", self.right_hand))
+        # Во время удара труба и рука уже нарисованы в кадре удара
+        hands = (("left", self.left_hand), ("right", None if attacking else self.right_hand))
         for hand, item in hands:
-            if item and behind[hand]:
+            if item and self.hand_behind(hand):
                 ITEM_DRAWERS[item](surf, self, x, y)
-        surf.blit(frame, (x, y))
+        if attacking:
+            surf.blit(frame, (x - ATTACK_PAD[0], y - ATTACK_PAD[1]))
+        else:
+            surf.blit(frame, (x, y))
         for hand, item in hands:
-            if item and not behind[hand]:
+            if item and not self.hand_behind(hand):
                 ITEM_DRAWERS[item](surf, self, x, y)
 
+    def hand_behind(self, hand):
+        """Рисовать ли предмет в этой руке ЗА героем."""
+        return HAND_BEHIND[self.facing][hand]
+
     def idle_phase(self):
+        if self.swing is not None:                     # кадры удара сделаны из кадра "стоит"
+            return 0
         return int(not self.moving and math.sin(self.visual_time * 1.9) > .25)
 
     def hand_anchor(self, hand):
-        index = int(self.walk_time * 8) % 4 + 1 if self.moving else 0
+        index = int(self.walk_time * 8) % 4 + 1 if self.moving and self.swing is None else 0
         direction = 'right' if self.facing == 'left' else self.facing
+        if self.facing == 'left':           # в отражённой картинке руки меняются местами
+            hand = 'right' if hand == 'left' else 'left'
         x, y = HAND_ANCHORS[direction][hand][index]
         if self.facing == 'left':
             x = HERO_W * ART_SCALE - 1 - x
@@ -224,8 +246,8 @@ class Player:
 
     def flashlight_origin(self):
         hx, hy = self.hand_anchor('left')
-        gx, gy = rotate_point(2, 2, 8, 4, FLASHLIGHT_ANGLES[self.facing])
-        tx, ty = rotate_point(7, 2, 8, 4, FLASHLIGHT_ANGLES[self.facing])
+        gx, gy = flashlight_point(FLASHLIGHT_GRIP, self.facing)
+        tx, ty = flashlight_point(FLASHLIGHT_TIP, self.facing)
         return (self.rect.centerx - HERO_W / 2 + self.render_jitter + hx + (tx - gx) / ART_SCALE,
                 self.rect.bottom - HERO_H + hy + (ty - gy) / ART_SCALE)
 
@@ -395,9 +417,13 @@ HAND_ANCHORS = {
               'right': [(7, 28), (12, 27), (14, 27), (6, 28), (10, 28)]},
 }
 
-# Картинки фонарика в руке: data/items/flashlight_hand_on.png и _off.png.
-# Нарисованы так, будто фонарик светит ВПРАВО; для других сторон картинку поворачиваем.
+# Картинки фонарика в руке: data/items/flashlight_hand_on.png и _off.png (9x5 пикселей).
+# Нарисованы так, будто фонарик светит ВПРАВО; для "вверх" и "вниз" картинку поворачиваем,
+# для "влево" — отражаем (чтобы блик остался сверху).
 FLASHLIGHT_ANGLES = {"right": 0, "up": 90, "left": 180, "down": 270}   # поворот против часовой
+FLASHLIGHT_SIZE = (9, 5)
+FLASHLIGHT_GRIP = (1, 2)    # пиксель картинки, за который держит кулак (задний конец ручки)
+FLASHLIGHT_TIP = (8, 2)     # стекло — отсюда идёт луч
 
 
 def rotate_point(x, y, w, h, angle):
@@ -411,13 +437,22 @@ def rotate_point(x, y, w, h, angle):
     return x, y
 
 
+def flashlight_point(point, facing):
+    """Где окажется пиксель картинки фонарика, когда герой смотрит в сторону facing."""
+    w, h = FLASHLIGHT_SIZE
+    if facing == "left":
+        return w - 1 - point[0], point[1]
+    return rotate_point(*point, w, h, FLASHLIGHT_ANGLES[facing])
+
+
 def draw_flashlight(surf, player, sx, sy):
     """Рисует фонарик в левой руке. sx, sy — левый верхний угол картинки героя на экране."""
     img = item_image("flashlight_hand_on" if player.light_on else "flashlight_hand_off")
-    img = pygame.transform.scale(img, (8, 4))
-    angle = FLASHLIGHT_ANGLES[player.facing]
-    gx, gy = rotate_point(2, 2, 8, 4, angle)
-    img = pygame.transform.rotate(img, angle)
+    gx, gy = flashlight_point(FLASHLIGHT_GRIP, player.facing)
+    if player.facing == "left":
+        img = pygame.transform.flip(img, True, False)
+    else:
+        img = pygame.transform.rotate(img, FLASHLIGHT_ANGLES[player.facing])
     hx, hy = player.hand_anchor('left')
     surf.blit(img, (sx + hx - gx / ART_SCALE, sy + hy - gy / ART_SCALE))
     surf.fill((192, 157, 122), (sx + hx, sy + hy, .5, .5))
@@ -436,105 +471,30 @@ def monster_body(m):
     return pygame.Rect(m.rect.x - 2, m.rect.bottom - 18, 12, 18)
 
 
-# Как герой держит трубу, для каждого направления (углы в градусах: 0 — вправо, 90 — вниз,
-# -90 — вверх, 180 — влево):
-#   "shoulder" — плечо (точка внутри картинки героя 12x19), вокруг него вращается рука
-#   "idle"     — угол трубы, когда герой просто держит её (опущена к земле)
-#   "wind"     — угол в верхней точке замаха (труба занесена назад)
-#   "end"      — угол, где удар заканчивается
-#   "behind"   — True, если труба рисуется ЗА героем (когда он стоит к нам спиной)
-PIPE_POSES = {
-    "right": {"shoulder": (5, 10), "idle": 55,  "wind": -150, "end": 40,   "behind": False},
-    "left":  {"shoulder": (6, 10), "idle": 125, "wind": 330,  "end": 140,  "behind": False},
-    "down":  {"shoulder": (2, 10), "idle": 100, "wind": 240,  "end": 470,  "behind": False},
-    "up":    {"shoulder": (9, 10), "idle": 80,  "wind": 60,   "end": -130, "behind": True},
-}
-PIPE_LEN = 7            # 14 native pixels, proportionate to the new hero
-ARM_LEN = 1.5           # slight arm extension during a swing, zero at rest
+# Труба в руке, пока герой не бьёт: data/items/pipe_hand.png (12x12 пикселей).
+# Нарисована наискосок концом вниз-вправо; когда рука героя слева на экране
+# (смотрит вниз или влево) — отражаем. PIPE_GRIP — пиксель, за который держит кулак.
+PIPE_GRIP = (2, 2)
+PIPE_SIZE = (12, 12)
 
-# Удар делится на 3 части (доли от SWING_TIME):
-WIND_PART = 0.2         # 0 … 0.2   — замах: труба уходит назад
-STRIKE_PART = 0.55      # 0.2 … 0.55 — удар: быстрая дуга вперёд (попадание — в середине SWING_TIME)
+# Кадры удара по ходу замаха (0…1): замах, удар (попадание — в середине), доводка, рука вниз
+ATTACK_STEPS = (0.3, 0.55, 0.8)
 
 
-def ease_out(t):
-    """Быстро в начале, плавно в конце."""
-    return 1 - (1 - t) ** 2
-
-
-def lerp_angle(a, b, t):
-    """Угол между a и b: при t=0 — a, при t=1 — b."""
-    return a + (b - a) * t
-
-
-def lerp_angle_short(a, b, t):
-    """То же, но поворачивает коротким путём (не крутит трубу через лишний круг)."""
-    diff = (b - a + 180) % 360 - 180
-    return a + diff * t
-
-
-def pipe_angle(pose, progress):
-    """Угол трубы в момент удара. progress: None — просто держит, 0…1 — ход удара."""
-    if progress is None:
-        return pose["idle"]
-    if progress < WIND_PART:                                    # замах назад
-        t = ease_out(progress / WIND_PART)
-        return lerp_angle(pose["idle"], pose["wind"], t)
-    if progress < STRIKE_PART:                                  # удар
-        t = (progress - WIND_PART) / (STRIKE_PART - WIND_PART)
-        return lerp_angle(pose["wind"], pose["end"], t)
-    t = ease_out((progress - STRIKE_PART) / (1 - STRIKE_PART))  # возвращаем трубу вниз
-    return lerp_angle_short(pose["end"], pose["idle"], t)
-
-
-def pipe_line(surf, a, b, color):
-    """Ровная пиксельная линия от точки a до точки b (по одному пикселю на шаг)."""
-    surf.line(color, a, b)
+def attack_frame(progress):
+    """Номер кадра удара для хода замаха progress (0…1)."""
+    return sum(progress >= step for step in ATTACK_STEPS)
 
 
 def draw_pipe(surf, player, sx, sy):
-    """Рисует трубу в руке героя. sx, sy — левый верхний угол картинки героя на экране."""
-    pose = PIPE_POSES[player.facing]
-    angle = math.radians(pipe_angle(pose, player.swing))
-    cos, sin = math.cos(angle), math.sin(angle)
-
+    """Рисует трубу в правой руке. sx, sy — левый верхний угол картинки героя на экране."""
+    img = item_image("pipe_hand")
+    gx, gy = PIPE_GRIP
+    if player.facing in ("down", "left"):
+        img = pygame.transform.flip(img, True, False)
+        gx = PIPE_SIZE[0] - 1 - gx
     hx, hy = player.hand_anchor('right')
-    shx, shy = sx + hx, sy + hy
-    extension = ARM_LEN * math.sin(math.pi * player.swing) if player.swing is not None else 0
-    hand = (shx + cos * extension, shy + sin * extension)
-    start = (hand[0] - cos, hand[1] - sin)
-    tip = (hand[0] + cos * (PIPE_LEN - 1), hand[1] + sin * (PIPE_LEN - 1))
-
-    # След от удара: светлая дуга, по которой прошёл конец трубы
-    p = player.swing
-    if p is not None and WIND_PART < p < STRIKE_PART + 0.12:
-        now = pipe_angle(pose, p)
-        back = pipe_angle(pose, max(WIND_PART, p - 0.15)) if p < STRIKE_PART else pose["wind"]
-        if p >= STRIKE_PART:                                    # после удара след быстро гаснет
-            fade = (p - STRIKE_PART) / 0.12
-            back = lerp_angle(pose["end"], pose["wind"], 0.35 * (1 - fade))
-            now = pose["end"]
-        r = ARM_LEN + PIPE_LEN - 2
-        steps = max(2, int(abs(now - back) / 3))
-        for i in range(steps + 1):
-            a = math.radians(back + (now - back) * i / steps)
-            for rr, col in ((r - 1, (120, 122, 130)), (r, (200, 200, 210))):   # дуга в 2 пикселя
-                surf.set_at((round(shx + math.cos(a) * rr), round(shy + math.sin(a) * rr)), col)
-
-    # Рука (рукав куртки) от плеча до кисти — только во время удара
-    if p is not None:
-        pipe_line(surf, (shx, shy), hand, (92, 80, 60))
-
-    # Сама труба: тёмный контур + светлая середина (металл)
-    surf.line((32, 31, 32), start, tip, width=1.5)
-    surf.line((128, 122, 108), start, tip, width=.5)
-    # Native-pixel metallic edge and a rust seam along the procedural held weapon.
-    surf.line((181, 177, 161), (start[0] - sin * .25, start[1] + cos * .25),
-              (tip[0] - sin * .25, tip[1] + cos * .25), width=.5)
-    mid = ((start[0] + tip[0]) / 2, (start[1] + tip[1]) / 2)
-    surf.line((104, 64, 42), mid, (mid[0] + cos * 2, mid[1] + sin * 2), width=.5)
-    surf.set_at((round(tip[0]), round(tip[1])), (170, 170, 178))   # блик на конце
-    surf.fill((206, 173, 139), (hand[0] - .25, hand[1] - .25, 1, 1))
+    surf.blit(img, (sx + hx - gx / ART_SCALE, sy + hy - gy / ART_SCALE))
 
 
 # Какой функцией рисовать каждый предмет. Новый предмет: напиши для него функцию

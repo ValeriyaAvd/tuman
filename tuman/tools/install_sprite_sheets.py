@@ -49,7 +49,7 @@ def main():
     monster = sheet('monster', 2, 1, (24, 40))
     source = Image.open(ROOT / 'art_source/generated/items.png')
     targets = [('flashlight_icon', (32, 32)), ('note_icon', (32, 32)), ('pipe_icon', (32, 32)),
-               ('pipe_ground', (34, 28)), ('flashlight_hand_off', (14, 10)), ('flashlight_hand_on', (14, 10))]
+               ('pipe_ground', (34, 28))]   # flashlight_hand_*.png are hand-pixelled now, not generated
     for i, (name, size) in enumerate(targets):
         x, y = i % 3, i // 3
         cell = source.crop((round(source.width * x / 3), round(source.height * y / 2),
@@ -65,7 +65,7 @@ def main():
         preview.paste(img.resize((size[0] * 4, size[1] * 4), Image.Resampling.NEAREST), (24 + i * 180, 240),
                       img.getchannel('A').resize((size[0] * 4, size[1] * 4), Image.Resampling.NEAREST))
     preview.save(ROOT / 'art_source/sprites-preview.png')
-    print('Installed hero 120x114, monster 48x40 and six item sprites. Native pixels, bounded palettes, binary alpha.')
+    print('Installed hero 120x114, monster 48x40 and four item sprites. Native pixels, bounded palettes, binary alpha.')
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@
   "tilewidth": 32,
   "tileheight": 56,
   "objectalignment": "bottomleft",
-  "tilecount": 36,
+  "tilecount": 42,
   "tiles": [
     {
       "id": 0,
@@ -486,6 +486,63 @@
           "value": 26
         }
       ]
+    },
+    {
+      "id": 36,
+      "image": "city_gate.png",
+      "imagewidth": 96,
+      "imageheight": 48,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 45
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "image": "city_fence_front.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 32
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "image": "city_fence_side_l.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 39,
+      "image": "city_fence_side_r.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 40,
+      "image": "city_fence_join.png",
+      "imagewidth": 16,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 26
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "image": "city_abyss_rim_top.png",
+      "imagewidth": 256,
+      "imageheight": 16
     }
   ]
 }

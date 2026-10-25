@@ -1,2329 +1,2002 @@
 {
-  "type": "map",
-  "version": "1.10",
-  "tiledversion": "1.11.2",
-  "orientation": "orthogonal",
-  "renderorder": "right-down",
-  "infinite": false,
-  "width": 16,
-  "height": 12,
-  "tilewidth": 32,
-  "tileheight": 32,
-  "nextlayerid": 9,
-  "nextobjectid": 108,
-  "properties": [
+ "type": "map",
+ "version": "1.10",
+ "tiledversion": "1.11.2",
+ "orientation": "orthogonal",
+ "renderorder": "right-down",
+ "infinite": false,
+ "width": 24,
+ "height": 14,
+ "tilewidth": 32,
+ "tileheight": 32,
+ "compressionlevel": -1,
+ "nextlayerid": 13,
+ "nextobjectid": 81,
+ "properties": [
+  {
+   "name": "inside",
+   "type": "bool",
+   "value": true
+  },
+  {
+   "name": "world_life_version",
+   "type": "int",
+   "value": 1
+  }
+ ],
+ "tilesets": [
+  {
+   "firstgid": 1,
+   "source": "tilesets/interior.tsj"
+  },
+  {
+   "firstgid": 65,
+   "source": "tilesets/terrain.tsj"
+  },
+  {
+   "firstgid": 83,
+   "source": "tilesets/objects.tsj"
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "Floor and walls",
+   "type": "tilelayer",
+   "width": 24,
+   "height": 14,
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "data": [
+    17,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    13,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    13,
+    11,
+    11,
+    18,
+    17,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    14,
+    12,
+    12,
+    16,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    14,
+    12,
+    12,
+    18,
+    17,
+    9,
+    4,
+    9,
+    2,
+    7,
+    4,
+    9,
+    1,
+    7,
+    4,
+    6,
+    3,
+    9,
+    3,
+    9,
+    1,
+    6,
+    2,
+    6,
+    4,
+    7,
+    3,
+    18,
+    17,
+    3,
+    6,
+    3,
+    8,
+    2,
+    6,
+    1,
+    6,
+    5,
+    7,
+    1,
+    9,
+    1,
+    10,
+    5,
+    8,
+    1,
+    7,
+    1,
+    10,
+    1,
+    9,
+    18,
+    17,
+    6,
+    1,
+    7,
+    1,
+    7,
+    1,
+    6,
+    2,
+    6,
+    2,
+    6,
+    4,
+    6,
+    2,
+    6,
+    1,
+    6,
+    2,
+    6,
+    1,
+    6,
+    2,
+    18,
+    17,
+    2,
+    7,
+    1,
+    9,
+    1,
+    9,
+    5,
+    10,
+    1,
+    6,
+    2,
+    6,
+    1,
+    8,
+    3,
+    6,
+    3,
+    6,
+    3,
+    6,
+    4,
+    6,
+    18,
+    17,
+    6,
+    4,
+    6,
+    2,
+    7,
+    1,
+    8,
+    2,
+    6,
+    1,
+    10,
+    2,
+    9,
+    1,
+    9,
+    1,
+    6,
+    1,
+    7,
+    3,
+    6,
+    1,
+    18,
+    17,
+    1,
+    7,
+    1,
+    6,
+    1,
+    6,
+    1,
+    10,
+    1,
+    7,
+    1,
+    6,
+    1,
+    8,
+    1,
+    6,
+    1,
+    6,
+    1,
+    9,
+    4,
+    6,
+    18,
+    17,
+    6,
+    2,
+    7,
+    1,
+    6,
+    1,
+    8,
+    2,
+    6,
+    1,
+    6,
+    3,
+    7,
+    4,
+    10,
+    1,
+    6,
+    2,
+    8,
+    4,
+    9,
+    1,
+    18,
+    17,
+    3,
+    6,
+    3,
+    6,
+    3,
+    9,
+    1,
+    7,
+    1,
+    7,
+    1,
+    9,
+    1,
+    7,
+    1,
+    7,
+    1,
+    9,
+    3,
+    6,
+    3,
+    7,
+    18,
+    17,
+    6,
+    3,
+    7,
+    2,
+    9,
+    1,
+    7,
+    2,
+    6,
+    3,
+    7,
+    1,
+    7,
+    1,
+    6,
+    4,
+    6,
+    1,
+    7,
+    4,
+    10,
+    1,
+    18,
+    17,
+    5,
+    7,
+    1,
+    7,
+    4,
+    6,
+    1,
+    6,
+    1,
+    7,
+    1,
+    9,
+    1,
+    6,
+    3,
+    6,
+    5,
+    9,
+    4,
+    10,
+    3,
+    6,
+    18,
+    17,
+    9,
+    5,
+    9,
+    5,
+    9,
+    4,
+    6,
+    2,
+    6,
+    1,
+    6,
+    1,
+    6,
+    1,
+    8,
+    1,
+    9,
+    1,
+    7,
+    1,
+    7,
+    2,
+    18,
+    19,
+    19,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    19,
+    19,
+    21,
+    22,
+    19,
+    19,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    19,
+    19
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Wall shadows",
+   "type": "tilelayer",
+   "width": 24,
+   "height": 14,
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    26,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    27,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Wall decor",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
     {
-      "name": "inside",
-      "type": "bool",
-      "value": true
+     "id": 2,
+     "gid": 52,
+     "name": "clock",
+     "type": "",
+     "x": 296,
+     "y": 30,
+     "width": 14,
+     "height": 14,
+     "rotation": 0,
+     "visible": true
     },
     {
-      "name": "world_life_version",
-      "type": "int",
-      "value": 1
+     "id": 3,
+     "gid": 50,
+     "name": "poster_sale",
+     "type": "",
+     "x": 330,
+     "y": 52,
+     "width": 22,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 4,
+     "gid": 53,
+     "name": "vent",
+     "type": "",
+     "x": 410,
+     "y": 26,
+     "width": 18,
+     "height": 10,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 5,
+     "gid": 51,
+     "name": "poster_missing",
+     "type": "",
+     "x": 446,
+     "y": 54,
+     "width": 22,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 6,
+     "gid": 54,
+     "name": "switch",
+     "type": "",
+     "x": 540,
+     "y": 48,
+     "width": 9,
+     "height": 14,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 7,
+     "gid": 49,
+     "name": "storeroom_door",
+     "type": "",
+     "x": 560,
+     "y": 64,
+     "width": 36,
+     "height": 50,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 8,
+     "gid": 55,
+     "name": "corkboard",
+     "type": "",
+     "x": 640,
+     "y": 48,
+     "width": 34,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 9,
+     "gid": 56,
+     "name": "extinguisher",
+     "type": "",
+     "x": 616,
+     "y": 60,
+     "width": 10,
+     "height": 22,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 10,
+     "gid": 50,
+     "name": "poster_sale",
+     "type": "",
+     "x": 700,
+     "y": 52,
+     "width": 22,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
     }
-  ],
-  "layers": [
+   ],
+   "properties": [
     {
-      "id": 1,
-      "name": "Ground and buildings",
-      "type": "tilelayer",
-      "width": 16,
-      "height": 12,
-      "x": 0,
-      "y": 0,
-      "opacity": 1,
-      "visible": true,
-      "data": [
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2129,
-        2130,
-        2131,
-        2132,
-        2133,
-        2134,
-        2135,
-        2136,
-        2136,
-        2137,
-        2138,
-        2139,
-        2136,
-        2136,
-        2128,
-        2128,
-        2140,
-        2141,
-        2142,
-        2143,
-        2144,
-        2145,
-        2146,
-        2147,
-        2148,
-        2149,
-        2150,
-        2151,
-        2152,
-        2153,
-        2128,
-        2128,
-        2154,
-        2155,
-        2156,
-        2157,
-        2158,
-        2159,
-        2160,
-        2161,
-        2162,
-        2163,
-        2164,
-        2165,
-        2166,
-        2167,
-        2128,
-        2128,
-        2168,
-        2169,
-        2170,
-        2171,
-        2172,
-        2173,
-        2174,
-        2175,
-        2176,
-        2177,
-        2178,
-        2179,
-        2180,
-        2181,
-        2128,
-        2128,
-        2182,
-        2183,
-        2184,
-        2185,
-        2186,
-        2187,
-        2188,
-        2189,
-        2190,
-        2191,
-        2192,
-        2193,
-        2194,
-        2195,
-        2128,
-        2128,
-        2196,
-        2197,
-        2198,
-        2199,
-        2200,
-        2201,
-        2202,
-        2203,
-        2204,
-        2205,
-        2206,
-        2207,
-        2208,
-        2209,
-        2128,
-        2128,
-        2210,
-        2211,
-        2212,
-        2213,
-        2214,
-        2215,
-        2216,
-        2217,
-        2218,
-        2219,
-        2220,
-        2221,
-        2222,
-        2223,
-        2128,
-        2128,
-        2224,
-        2225,
-        2226,
-        2227,
-        2228,
-        2229,
-        2230,
-        2231,
-        2232,
-        2233,
-        2234,
-        2235,
-        2236,
-        2237,
-        2128,
-        2128,
-        2238,
-        2239,
-        2240,
-        2241,
-        2242,
-        2243,
-        2244,
-        2245,
-        2246,
-        2247,
-        2248,
-        2249,
-        2250,
-        2251,
-        2128,
-        2128,
-        2252,
-        2253,
-        2254,
-        2255,
-        2256,
-        2257,
-        2258,
-        2259,
-        2260,
-        2261,
-        2262,
-        2263,
-        2264,
-        2265,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2266,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128,
-        2128
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Decor",
-      "type": "objectgroup",
-      "draworder": "topdown",
-      "opacity": 1,
-      "visible": true,
-      "color": "#ffffff",
-      "objects": [
-        {
-          "id": 1,
-          "name": "scenery",
-          "type": "",
-          "rotation": 0,
-          "visible": true,
-          "x": 320,
-          "y": 288,
-          "width": 96,
-          "height": 40,
-          "properties": [],
-          "gid": 2277
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Collisions",
-      "type": "objectgroup",
-      "draworder": "topdown",
-      "opacity": 1,
-      "visible": true,
-      "color": "#ff4444",
-      "objects": [
-        {
-          "id": 2,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 32,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 64,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 96,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 128,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 7,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 160,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 8,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 192,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 9,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 224,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 10,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 256,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 11,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 288,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 12,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 320,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 13,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 352,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 14,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 384,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 15,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 416,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 16,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 448,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 17,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 0,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 18,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 19,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 32,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 20,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 64,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 21,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 96,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 22,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 128,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 23,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 160,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 24,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 192,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 25,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 224,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 26,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 256,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 27,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 288,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 28,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 320,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 29,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 352,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 30,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 384,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 31,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 416,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 32,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 448,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 33,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 32,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 34,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 64,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 35,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 32,
-          "y": 64,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 36,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 64,
-          "y": 64,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 37,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 96,
-          "y": 64,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 38,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 64,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 39,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 96,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 40,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 96,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 41,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 42,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 64,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 43,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 96,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 44,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 128,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 45,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 160,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 46,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 256,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 47,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 288,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 48,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 320,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 49,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 352,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 50,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 128,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 51,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 160,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 52,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 160,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 53,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 54,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 64,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 55,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 96,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 56,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 128,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 57,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 160,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 58,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 256,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 59,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 288,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 60,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 320,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 61,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 352,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 62,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 192,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 63,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 224,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 64,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 224,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 65,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 256,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 66,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 320,
-          "y": 256,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 67,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 352,
-          "y": 256,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 68,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 384,
-          "y": 256,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 8
-            }
-          ]
-        },
-        {
-          "id": 69,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 256,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 70,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 288,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 71,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 288,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 72,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 320,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 73,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 320,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 74,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 0,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 75,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 32,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 76,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 64,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 77,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 96,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 78,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 128,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 79,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 160,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 80,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 192,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 81,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 224,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 82,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 256,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 83,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 288,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 84,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 320,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 85,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 352,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 86,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 384,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 87,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 416,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 88,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 448,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        },
-        {
-          "id": 89,
-          "name": "collision",
-          "type": "collision",
-          "rotation": 0,
-          "visible": true,
-          "x": 480,
-          "y": 352,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "light_pass",
-              "type": "int",
-              "value": 16
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Spawns",
-      "type": "objectgroup",
-      "draworder": "topdown",
-      "opacity": 1,
-      "visible": true,
-      "color": "#44dd88",
-      "objects": [
-        {
-          "id": 90,
-          "name": "entry",
-          "type": "spawn",
-          "rotation": 0,
-          "visible": true,
-          "x": 232,
-          "y": 336,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": []
-        },
-        {
-          "id": 92,
-          "name": "monster_1",
-          "type": "monster",
-          "rotation": 0,
-          "visible": true,
-          "x": 424,
-          "y": 112,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": []
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Doors",
-      "type": "objectgroup",
-      "draworder": "topdown",
-      "opacity": 1,
-      "visible": true,
-      "color": "#55aaff",
-      "objects": [
-        {
-          "id": 91,
-          "name": "door",
-          "type": "door",
-          "rotation": 0,
-          "visible": true,
-          "x": 224,
-          "y": 320,
-          "width": 32,
-          "height": 32,
-          "properties": [
-            {
-              "name": "target",
-              "type": "string",
-              "value": "street"
-            },
-            {
-              "name": "spawn",
-              "type": "string",
-              "value": "from_shop"
-            },
-            {
-              "name": "facing",
-              "type": "string",
-              "value": "down"
-            },
-            {
-              "name": "hint",
-              "type": "string",
-              "value": "[E] выйти на улицу"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Items",
-      "type": "objectgroup",
-      "draworder": "topdown",
-      "opacity": 1,
-      "visible": true,
-      "color": "#ffdd55",
-      "objects": []
-    },
-    {
-      "id": 7,
-      "name": "Lights",
-      "type": "objectgroup",
-      "draworder": "topdown",
-      "opacity": 1,
-      "visible": true,
-      "color": "#ffff88",
-      "objects": [
-        {
-          "id": 93,
-          "name": "lamp_broken",
-          "type": "light",
-          "rotation": 0,
-          "visible": true,
-          "x": 272,
-          "y": 112,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "lamp_broken"
-            }
-          ]
-        },
-        {
-          "id": 94,
-          "name": "lamp_broken",
-          "type": "light",
-          "rotation": 0,
-          "visible": true,
-          "x": 80,
-          "y": 272,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "lamp_broken"
-            }
-          ]
-        },
-        {
-          "id": 95,
-          "name": "booth",
-          "type": "light",
-          "rotation": 0,
-          "visible": true,
-          "x": 390,
-          "y": 252,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "booth"
-            }
-          ]
-        },
-        {
-          "id": 96,
-          "name": "fridge",
-          "type": "light",
-          "rotation": 0,
-          "visible": true,
-          "x": 48,
-          "y": 70,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "fridge"
-            }
-          ]
-        },
-        {
-          "id": 97,
-          "name": "fridge",
-          "type": "light",
-          "rotation": 0,
-          "visible": true,
-          "x": 80,
-          "y": 70,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "fridge"
-            }
-          ]
-        },
-        {
-          "id": 98,
-          "name": "fridge",
-          "type": "light",
-          "rotation": 0,
-          "visible": true,
-          "x": 112,
-          "y": 70,
-          "width": 0,
-          "height": 0,
-          "point": true,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "fridge"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Story",
-      "type": "objectgroup",
-      "draworder": "topdown",
-      "opacity": 1,
-      "visible": true,
-      "color": "#cc88ff",
-      "objects": [
-        {
-          "id": 99,
-          "name": "shelf_1",
-          "type": "spot",
-          "rotation": 0,
-          "visible": true,
-          "x": 48,
-          "y": 112,
-          "width": 160,
-          "height": 64,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "shelf"
-            },
-            {
-              "name": "approach",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "inspect",
-              "type": "string",
-              "value": "[\"Консервы. Срок годности истёк десять лет назад.\", \"На одной банке детский рисунок вместо этикетки. Тот же дом у воды.\"]"
-            }
-          ]
-        },
-        {
-          "id": 100,
-          "name": "shelf_2",
-          "type": "spot",
-          "rotation": 0,
-          "visible": true,
-          "x": 240,
-          "y": 112,
-          "width": 160,
-          "height": 64,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "shelf"
-            },
-            {
-              "name": "approach",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "inspect",
-              "type": "string",
-              "value": "[\"Полки в пыли. Кроме одного места — отсюда что-то взяли совсем недавно.\"]"
-            }
-          ]
-        },
-        {
-          "id": 101,
-          "name": "shelf_3",
-          "type": "spot",
-          "rotation": 0,
-          "visible": true,
-          "x": 48,
-          "y": 176,
-          "width": 160,
-          "height": 64,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "shelf"
-            },
-            {
-              "name": "approach",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "inspect",
-              "type": "string",
-              "value": "[\"Пакеты с крупой прогрызены. Но мышей здесь не слышно. Вообще ничего не слышно.\"]"
-            }
-          ]
-        },
-        {
-          "id": 102,
-          "name": "shelf_4",
-          "type": "spot",
-          "rotation": 0,
-          "visible": true,
-          "x": 240,
-          "y": 176,
-          "width": 160,
-          "height": 64,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "shelf"
-            },
-            {
-              "name": "approach",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "name": "inspect",
-              "type": "string",
-              "value": "[\"Игрушки. Резиновая уточка... У брата была точно такая же.\", \"Я взял её в руки. Она мокрая.\"]"
-            }
-          ]
-        },
-        {
-          "id": 103,
-          "name": "counter_5",
-          "type": "spot",
-          "rotation": 0,
-          "visible": true,
-          "x": 304,
-          "y": 240,
-          "width": 128,
-          "height": 64,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "counter"
-            },
-            {
-              "name": "approach",
-              "type": "string",
-              "value": "Касса ещё включена."
-            },
-            {
-              "name": "inspect",
-              "type": "string",
-              "value": "[\"На экране последняя покупка: «Батарейки — 2 шт.». Дата стёрта.\", \"В ящике кассы ни денег, ни чеков. Только мокрый песок.\"]"
-            }
-          ]
-        },
-        {
-          "id": 104,
-          "name": "fridge_6",
-          "type": "spot",
-          "rotation": 0,
-          "visible": true,
-          "x": 24,
-          "y": 40,
-          "width": 112,
-          "height": 80,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "fridge"
-            },
-            {
-              "name": "approach",
-              "type": "string",
-              "value": "Холодильники гудят. Единственный звук здесь, кроме моих шагов."
-            },
-            {
-              "name": "inspect",
-              "type": "string",
-              "value": "[\"Бутылки с водой. Все пустые, но крышки закручены.\", \"На стекле изнутри отпечаток ладони. Маленькой.\"]"
-            }
-          ]
-        },
-        {
-          "id": 105,
-          "name": "back_door_7",
-          "type": "spot",
-          "rotation": 0,
-          "visible": true,
-          "x": 344,
-          "y": 64,
-          "width": 48,
-          "height": 28,
-          "properties": [
-            {
-              "name": "kind",
-              "type": "string",
-              "value": "back_door"
-            },
-            {
-              "name": "approach",
-              "type": "string",
-              "value": "Дверь в подсобку. «Только для персонала»."
-            },
-            {
-              "name": "inspect",
-              "type": "string",
-              "value": "[\"Заперто. Изнутри что-то скребётся... и затихает, когда я прислушиваюсь.\", \"Ключа нет. Может, он где-то в посёлке.\"]"
-            }
-          ]
-        },
-        {
-          "id": 106,
-          "name": "remark",
-          "type": "remark",
-          "rotation": 0,
-          "visible": true,
-          "x": 32,
-          "y": 288,
-          "width": 448,
-          "height": 64,
-          "properties": [
-            {
-              "name": "text",
-              "type": "string",
-              "value": "Внутри пахнет пылью и прокисшим молоком. И ещё чем-то... сладковатым."
-            }
-          ]
-        },
-        {
-          "id": 107,
-          "name": "remark",
-          "type": "remark",
-          "rotation": 0,
-          "visible": true,
-          "x": 288,
-          "y": 64,
-          "width": 192,
-          "height": 64,
-          "properties": [
-            {
-              "name": "text",
-              "type": "string",
-              "value": "Здесь холоднее. Будто сквозняк тянет из-за той двери."
-            }
-          ]
-        }
-      ]
+     "name": "ground",
+     "type": "bool",
+     "value": true
     }
-  ],
-  "tilesets": [
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Floor decor",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
     {
-      "firstgid": 1,
-      "source": "tilesets/world.tsj"
+     "id": 11,
+     "gid": 58,
+     "name": "door_mat",
+     "type": "",
+     "x": 358,
+     "y": 414,
+     "width": 52,
+     "height": 20,
+     "rotation": 0,
+     "visible": true
     },
     {
-      "firstgid": 2267,
-      "source": "tilesets/decor.tsj"
+     "id": 12,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 384,
+     "y": 400,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
     },
     {
-      "firstgid": 2278,
-      "source": "tilesets/terrain.tsj"
+     "id": 13,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 395,
+     "y": 375,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
     },
     {
-      "firstgid": 2296,
-      "source": "tilesets/objects.tsj"
+     "id": 14,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 406,
+     "y": 350,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 15,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 417,
+     "y": 325,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 16,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 428,
+     "y": 300,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 17,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 431,
+     "y": 273,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 18,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 435,
+     "y": 247,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 19,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 438,
+     "y": 220,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 20,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 450,
+     "y": 190,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 21,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 462,
+     "y": 160,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 22,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 483,
+     "y": 145,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 23,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 504,
+     "y": 130,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 24,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 524,
+     "y": 116,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 25,
+     "gid": 59,
+     "name": "footprints",
+     "type": "",
+     "x": 545,
+     "y": 101,
+     "width": 16,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 26,
+     "gid": 60,
+     "name": "stain_dark",
+     "type": "",
+     "x": 150,
+     "y": 214,
+     "width": 56,
+     "height": 26,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 27,
+     "gid": 61,
+     "name": "stain_rust",
+     "type": "",
+     "x": 520,
+     "y": 130,
+     "width": 40,
+     "height": 20,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 28,
+     "gid": 60,
+     "name": "stain_dark",
+     "type": "",
+     "x": 92,
+     "y": 392,
+     "width": 56,
+     "height": 26,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 29,
+     "gid": 62,
+     "name": "papers",
+     "type": "",
+     "x": 470,
+     "y": 300,
+     "width": 40,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 30,
+     "gid": 62,
+     "name": "papers",
+     "type": "",
+     "x": 170,
+     "y": 330,
+     "width": 40,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 31,
+     "gid": 63,
+     "name": "glass",
+     "type": "",
+     "x": 110,
+     "y": 100,
+     "width": 36,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 32,
+     "gid": 64,
+     "name": "sand",
+     "type": "",
+     "x": 610,
+     "y": 408,
+     "width": 40,
+     "height": 20,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 33,
+     "gid": 64,
+     "name": "sand",
+     "type": "",
+     "x": 540,
+     "y": 380,
+     "width": 40,
+     "height": 20,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 34,
+     "gid": 57,
+     "name": "dropped_basket",
+     "type": "",
+     "x": 250,
+     "y": 300,
+     "width": 28,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 35,
+     "gid": 62,
+     "name": "papers",
+     "type": "",
+     "x": 660,
+     "y": 330,
+     "width": 40,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 36,
+     "gid": 60,
+     "name": "stain_dark",
+     "type": "",
+     "x": 640,
+     "y": 260,
+     "width": 56,
+     "height": 26,
+     "rotation": 0,
+     "visible": true
     }
-  ]
+   ],
+   "properties": [
+    {
+     "name": "ground",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Furniture",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 37,
+     "gid": 28,
+     "name": "shelf_cans",
+     "type": "",
+     "x": 64,
+     "y": 168,
+     "width": 96,
+     "height": 56,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 38,
+     "gid": 29,
+     "name": "shelf_mixed",
+     "type": "",
+     "x": 184,
+     "y": 168,
+     "width": 96,
+     "height": 56,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 39,
+     "gid": 30,
+     "name": "shelf_drinks",
+     "type": "",
+     "x": 304,
+     "y": 168,
+     "width": 96,
+     "height": 56,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 40,
+     "gid": 31,
+     "name": "shelf_grain",
+     "type": "",
+     "x": 64,
+     "y": 256,
+     "width": 96,
+     "height": 56,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 41,
+     "gid": 32,
+     "name": "shelf_toys",
+     "type": "",
+     "x": 184,
+     "y": 256,
+     "width": 96,
+     "height": 56,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 42,
+     "gid": 33,
+     "name": "shelf_household",
+     "type": "",
+     "x": 628,
+     "y": 196,
+     "width": 96,
+     "height": 56,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 43,
+     "gid": 28,
+     "name": "shelf_cans",
+     "type": "",
+     "x": 628,
+     "y": 284,
+     "width": 96,
+     "height": 56,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 44,
+     "gid": 40,
+     "name": "fridge",
+     "type": "",
+     "x": 40,
+     "y": 74,
+     "width": 72,
+     "height": 62,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 45,
+     "gid": 41,
+     "name": "fridge_cracked",
+     "type": "",
+     "x": 116,
+     "y": 74,
+     "width": 72,
+     "height": 62,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 46,
+     "gid": 40,
+     "name": "fridge",
+     "type": "",
+     "x": 192,
+     "y": 74,
+     "width": 72,
+     "height": 62,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 47,
+     "gid": 38,
+     "name": "shelf_fallen",
+     "type": "",
+     "x": 300,
+     "y": 262,
+     "width": 104,
+     "height": 44,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 48,
+     "gid": 39,
+     "name": "chest_freezer",
+     "type": "",
+     "x": 480,
+     "y": 230,
+     "width": 72,
+     "height": 38,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 49,
+     "gid": 42,
+     "name": "counter",
+     "type": "",
+     "x": 572,
+     "y": 376,
+     "width": 112,
+     "height": 46,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 50,
+     "gid": 43,
+     "name": "boxes",
+     "type": "",
+     "x": 640,
+     "y": 112,
+     "width": 36,
+     "height": 32,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 51,
+     "gid": 43,
+     "name": "boxes",
+     "type": "",
+     "x": 684,
+     "y": 132,
+     "width": 36,
+     "height": 32,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 52,
+     "gid": 45,
+     "name": "cart",
+     "type": "",
+     "x": 500,
+     "y": 128,
+     "width": 32,
+     "height": 30,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 53,
+     "gid": 48,
+     "name": "bottle_crate",
+     "type": "",
+     "x": 606,
+     "y": 110,
+     "width": 24,
+     "height": 20,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 54,
+     "gid": 44,
+     "name": "baskets",
+     "type": "",
+     "x": 322,
+     "y": 408,
+     "width": 22,
+     "height": 20,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 55,
+     "gid": 47,
+     "name": "press_stand",
+     "type": "",
+     "x": 40,
+     "y": 408,
+     "width": 24,
+     "height": 38,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 56,
+     "gid": 46,
+     "name": "bucket",
+     "type": "",
+     "x": 236,
+     "y": 380,
+     "width": 18,
+     "height": 32,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 57,
+     "gid": 34,
+     "name": "can_pyramid",
+     "type": "",
+     "x": 300,
+     "y": 330,
+     "width": 34,
+     "height": 30,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 58,
+     "gid": 35,
+     "name": "sack_pallet",
+     "type": "",
+     "x": 80,
+     "y": 352,
+     "width": 52,
+     "height": 34,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 59,
+     "gid": 36,
+     "name": "promo_stand",
+     "type": "",
+     "x": 160,
+     "y": 404,
+     "width": 30,
+     "height": 44,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 60,
+     "gid": 37,
+     "name": "trash_bin",
+     "type": "",
+     "x": 540,
+     "y": 404,
+     "width": 16,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 61,
+     "gid": 34,
+     "name": "can_pyramid",
+     "type": "",
+     "x": 520,
+     "y": 300,
+     "width": 34,
+     "height": 30,
+     "rotation": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Collisions",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 62,
+     "name": "wall",
+     "type": "collision",
+     "x": 0,
+     "y": 0,
+     "width": 768,
+     "height": 64,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    },
+    {
+     "id": 63,
+     "name": "wall",
+     "type": "collision",
+     "x": 0,
+     "y": 64,
+     "width": 32,
+     "height": 352,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    },
+    {
+     "id": 64,
+     "name": "wall",
+     "type": "collision",
+     "x": 736,
+     "y": 64,
+     "width": 32,
+     "height": 352,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    },
+    {
+     "id": 65,
+     "name": "wall",
+     "type": "collision",
+     "x": 0,
+     "y": 416,
+     "width": 768,
+     "height": 32,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Spawns",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 67,
+     "name": "entry",
+     "type": "spawn",
+     "x": 380,
+     "y": 402,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": []
+    },
+    {
+     "id": 68,
+     "name": "monster_1",
+     "type": "monster",
+     "x": 560,
+     "y": 140,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": []
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "name": "Doors",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 66,
+     "name": "door",
+     "type": "door",
+     "x": 352,
+     "y": 384,
+     "width": 64,
+     "height": 32,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "target",
+       "type": "string",
+       "value": "street"
+      },
+      {
+       "name": "spawn",
+       "type": "string",
+       "value": "from_shop"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "down"
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "value": "[E] выйти на улицу"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "name": "Items",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": []
+  },
+  {
+   "id": 10,
+   "name": "Lights",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 69,
+     "name": "lamp_broken",
+     "type": "light",
+     "x": 250,
+     "y": 120,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "lamp_broken"
+      }
+     ]
+    },
+    {
+     "id": 70,
+     "name": "lamp_broken",
+     "type": "light",
+     "x": 130,
+     "y": 340,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "lamp_broken"
+      }
+     ]
+    },
+    {
+     "id": 71,
+     "name": "lamp_broken",
+     "type": "light",
+     "x": 600,
+     "y": 250,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "point": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "lamp_broken"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "name": "Story",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 72,
+     "name": "shelf_1",
+     "type": "spot",
+     "x": 56,
+     "y": 124,
+     "width": 112,
+     "height": 60,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "shelf"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Консервы. Срок годности истёк десять лет назад.\", \"На одной банке детский рисунок вместо этикетки. Тот же дом у воды.\"]"
+      }
+     ]
+    },
+    {
+     "id": 73,
+     "name": "shelf_2",
+     "type": "spot",
+     "x": 176,
+     "y": 124,
+     "width": 112,
+     "height": 60,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "shelf"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Полки в пыли. Кроме одного места — отсюда что-то взяли совсем недавно.\"]"
+      }
+     ]
+    },
+    {
+     "id": 74,
+     "name": "shelf_3",
+     "type": "spot",
+     "x": 56,
+     "y": 212,
+     "width": 112,
+     "height": 60,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "shelf"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Пакеты с крупой прогрызены. Но мышей здесь не слышно. Вообще ничего не слышно.\"]"
+      }
+     ]
+    },
+    {
+     "id": 75,
+     "name": "shelf_4",
+     "type": "spot",
+     "x": 176,
+     "y": 212,
+     "width": 112,
+     "height": 60,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "shelf"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Игрушки. Резиновая уточка... У брата была точно такая же.\", \"Я взял её в руки. Она мокрая.\"]"
+      }
+     ]
+    },
+    {
+     "id": 76,
+     "name": "counter_5",
+     "type": "spot",
+     "x": 564,
+     "y": 330,
+     "width": 128,
+     "height": 64,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "counter"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": "Касса ещё включена."
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"На экране последняя покупка: «Батарейки — 2 шт.». Дата стёрта.\", \"В ящике кассы ни денег, ни чеков. Только мокрый песок.\"]"
+      }
+     ]
+    },
+    {
+     "id": 77,
+     "name": "fridge_6",
+     "type": "spot",
+     "x": 32,
+     "y": 62,
+     "width": 240,
+     "height": 32,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "fridge"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": "Холодильники гудят. Единственный звук здесь, кроме моих шагов."
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Бутылки с водой. Все пустые, но крышки закручены.\", \"На стекле изнутри отпечаток ладони. Маленькой.\"]"
+      }
+     ]
+    },
+    {
+     "id": 78,
+     "name": "back_door_7",
+     "type": "spot",
+     "x": 552,
+     "y": 64,
+     "width": 52,
+     "height": 28,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "back_door"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": "Дверь в подсобку. «Только для персонала»."
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Заперто. Изнутри что-то скребётся... и затихает, когда я прислушиваюсь.\", \"Ключа нет. Может, он где-то в посёлке.\"]"
+      }
+     ]
+    },
+    {
+     "id": 79,
+     "name": "remark",
+     "type": "remark",
+     "x": 288,
+     "y": 352,
+     "width": 192,
+     "height": 64,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "text",
+       "type": "string",
+       "value": "Внутри пахнет пылью и прокисшим молоком. И ещё чем-то... сладковатым."
+      }
+     ]
+    },
+    {
+     "id": 80,
+     "name": "remark",
+     "type": "remark",
+     "x": 480,
+     "y": 64,
+     "width": 192,
+     "height": 96,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "text",
+       "type": "string",
+       "value": "Здесь холоднее. Будто сквозняк тянет из-за той двери."
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }

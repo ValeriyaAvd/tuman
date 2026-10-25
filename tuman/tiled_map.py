@@ -99,7 +99,10 @@ class TiledMap:
                 self.tiles[first + i] = (sheet.subsurface(rect), definitions.get(i, {}), offset)
         else:
             for i, tile in definitions.items():
-                self.tiles[first + i] = (self.image(root / tile['image']), tile, offset)
+                image = self.image(root / tile['image'])
+                if 'width' in tile:          # Tiled 1.9+: tile is a sub-rectangle of a shared image
+                    image = image.subsurface((tile.get('x', 0), tile.get('y', 0), tile['width'], tile['height']))
+                self.tiles[first + i] = (image, tile, offset)
 
     def tile(self, gid):
         raw = gid & 0x0fffffff
