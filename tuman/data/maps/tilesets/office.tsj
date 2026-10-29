@@ -1,0 +1,648 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "name": "Back office",
+  "tilewidth": 92,
+  "tileheight": 64,
+  "columns": 0,
+  "objectalignment": "bottomleft",
+  "tilecount": 23,
+  "grid": {
+    "orientation": "orthogonal",
+    "width": 1,
+    "height": 1
+  },
+  "margin": 0,
+  "spacing": 0,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../../tiles/terrain/floor_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor0"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../../tiles/terrain/floor_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor1"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../../tiles/terrain/floor_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor2"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../../tiles/terrain/floor_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor3"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 136,
+      "y": 0,
+      "width": 64,
+      "height": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "doorway"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 202,
+      "y": 0,
+      "width": 92,
+      "height": 52,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "desk"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 47
+        },
+        {
+          "name": "light_pass",
+          "type": "int",
+          "value": 8
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[[\"desk\", 13, 9]]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 0,
+            "y": 22,
+            "width": 92,
+            "height": 26,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 296,
+      "y": 0,
+      "width": 24,
+      "height": 34,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "chair"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 31
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 3,
+            "y": 20,
+            "width": 18,
+            "height": 8,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 322,
+      "y": 0,
+      "width": 38,
+      "height": 46,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "safe_closed"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 43
+        },
+        {
+          "name": "light_pass",
+          "type": "int",
+          "value": 8
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 1,
+            "y": 26,
+            "width": 36,
+            "height": 17,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 362,
+      "y": 0,
+      "width": 38,
+      "height": 46,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "safe_open"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 43
+        },
+        {
+          "name": "light_pass",
+          "type": "int",
+          "value": 8
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 0,
+            "y": 26,
+            "width": 37,
+            "height": 17,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 402,
+      "y": 0,
+      "width": 26,
+      "height": 50,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "cabinet"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 46
+        },
+        {
+          "name": "light_pass",
+          "type": "int",
+          "value": 8
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 1,
+            "y": 30,
+            "width": 24,
+            "height": 16,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 430,
+      "y": 0,
+      "width": 74,
+      "height": 36,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "cot"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 30
+        },
+        {
+          "name": "light_pass",
+          "type": "int",
+          "value": 40
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 1,
+            "y": 12,
+            "width": 72,
+            "height": 18,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 506,
+      "y": 0,
+      "width": 66,
+      "height": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "rack"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 61
+        },
+        {
+          "name": "light_pass",
+          "type": "int",
+          "value": 8
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 0,
+            "y": 44,
+            "width": 66,
+            "height": 18,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 574,
+      "y": 0,
+      "width": 20,
+      "height": 28,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "calendar"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 596,
+      "y": 0,
+      "width": 44,
+      "height": 30,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "clippings"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 0,
+      "y": 66,
+      "width": 18,
+      "height": 38,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "raincoat"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 20,
+      "y": 66,
+      "width": 40,
+      "height": 18,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "wet_trail"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 62,
+      "y": 66,
+      "width": 84,
+      "height": 40,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "rug"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 148,
+      "y": 66,
+      "width": 30,
+      "height": 30,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "newspaper_stack"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 28
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 2,
+            "y": 18,
+            "width": 26,
+            "height": 8,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 180,
+      "y": 66,
+      "width": 26,
+      "height": 22,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "key_board"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 208,
+      "y": 66,
+      "width": 16,
+      "height": 18,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "photo_frame"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 226,
+      "y": 66,
+      "width": 30,
+      "height": 30,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "wall_stain"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 258,
+      "y": 66,
+      "width": 22,
+      "height": 34,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "stool_kettle"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 31
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "draworder": "index",
+        "objects": [
+          {
+            "id": 1,
+            "name": "",
+            "type": "",
+            "x": 2,
+            "y": 24,
+            "width": 18,
+            "height": 8,
+            "rotation": 0,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "image": "office.png",
+      "imagewidth": 640,
+      "imageheight": 106,
+      "x": 282,
+      "y": 66,
+      "width": 34,
+      "height": 16,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "crumpled"
+        }
+      ]
+    }
+  ]
+}

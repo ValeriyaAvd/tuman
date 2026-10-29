@@ -1,0 +1,185 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Decor",
+  "tilewidth": 128,
+  "tileheight": 68,
+  "columns": 0,
+  "objectalignment": "bottomleft",
+  "tilecount": 11,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "decor_000.png",
+      "imagewidth": 56,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 64
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "tree"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "decor_001.png",
+      "imagewidth": 56,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 64
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "tree"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "decor_002.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 28
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "bush"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "decor_003.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 28
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "bush"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "decor_004.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 26
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "decor_005.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "lamp"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "decor_006.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "lamp_broken"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "decor_007.png",
+      "imagewidth": 28,
+      "imageheight": 56,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 56
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "decor_008.png",
+      "imagewidth": 128,
+      "imageheight": 60,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 61
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "decor_009.png",
+      "imagewidth": 128,
+      "imageheight": 60,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 60
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "decor_010.png",
+      "imagewidth": 96,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 40
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Terrain",
+  "tilewidth": 32,
+  "tileheight": 32,
+  "objectalignment": "bottomleft",
+  "columns": 0,
+  "tilecount": 18,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../../../tiles/terrain/grass_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../../../tiles/terrain/grass_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../../../tiles/terrain/asphalt_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../../../tiles/terrain/asphalt_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../../../tiles/terrain/pavement_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "pavement"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../../../tiles/terrain/pavement_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "pavement"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../../../tiles/terrain/floor_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../../../tiles/terrain/floor_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../../../tiles/terrain/puddle_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "puddle"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../../../tiles/terrain/puddle_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "puddle"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../../../tiles/terrain/road_line_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "road_line"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../../../tiles/terrain/road_line_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "road_line"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../../../tiles/terrain/manhole_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "manhole"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../../../tiles/terrain/manhole_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "manhole"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../../../tiles/terrain/abyss_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "abyss"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../../../tiles/terrain/abyss_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "abyss"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../../../tiles/terrain/wall_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "wall"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../../../tiles/terrain/wall_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "wall"
+        }
+      ]
+    }
+  ]
+}

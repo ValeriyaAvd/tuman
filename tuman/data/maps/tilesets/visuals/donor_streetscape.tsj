@@ -1,0 +1,251 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Parking and refuse yard",
+  "tilewidth": 32,
+  "tileheight": 32,
+  "objectalignment": "bottomleft",
+  "columns": 0,
+  "tilecount": 18,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../../../tiles/streetscape/parking_line_5_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../../../tiles/streetscape/parking_line_5_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../../../tiles/streetscape/parking_line_5_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../../../tiles/streetscape/parking_line_3_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../../../tiles/streetscape/parking_line_10_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../../../tiles/streetscape/parking_line_10_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../../../tiles/streetscape/parking_line_11_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../../../tiles/streetscape/parking_line_9_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Worn bay marking"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../../../tiles/streetscape/wheel_stop.png",
+      "imagewidth": 48,
+      "imageheight": 12,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Concrete wheel stop"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../../../tiles/streetscape/car_tan_vertical.png",
+      "imagewidth": 64,
+      "imageheight": 96,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Parked car / tan"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../../../tiles/streetscape/car_blue_vertical.png",
+      "imagewidth": 64,
+      "imageheight": 96,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Parked car / blue"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../../../tiles/streetscape/tire_pile.png",
+      "imagewidth": 48,
+      "imageheight": 36,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Discarded tires"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../../../tiles/streetscape/oil_spill_0.png",
+      "imagewidth": 64,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Engine oil spill"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../../../tiles/streetscape/oil_spill_1.png",
+      "imagewidth": 64,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Engine oil spill"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../../../tiles/streetscape/oil_spill_2.png",
+      "imagewidth": 64,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Engine oil spill"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../../../tiles/streetscape/oil_spill_3.png",
+      "imagewidth": 64,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Engine oil spill"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../../../tiles/streetscape/tire_track.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Faded tire tracks"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../../../tiles/streetscape/dumpster_filled.png",
+      "imagewidth": 96,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Overflowing dumpster"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 64
+        }
+      ]
+    }
+  ]
+}

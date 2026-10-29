@@ -1,0 +1,71 @@
+{
+ "type": "tileset",
+ "version": "1.10",
+ "tiledversion": "1.11.2",
+ "name": "Lore",
+ "tilewidth": 48,
+ "tileheight": 64,
+ "columns": 0,
+ "objectalignment": "bottomleft",
+ "tilecount": 3,
+ "grid": {
+  "orientation": "orthogonal",
+  "width": 1,
+  "height": 1
+ },
+ "margin": 0,
+ "spacing": 0,
+ "tiles": [
+  {
+   "id": 0,
+   "image": "city_notice_board.png",
+   "imagewidth": 48,
+   "imageheight": 56,
+   "properties": [
+    {
+     "name": "sort_y",
+     "type": "int",
+     "value": 54
+    }
+   ],
+   "objectgroup": {
+    "type": "objectgroup",
+    "objects": [
+     {
+      "id": 1,
+      "x": 6,
+      "y": 48,
+      "width": 36,
+      "height": 6
+     }
+    ]
+   }
+  },
+  {
+   "id": 1,
+   "image": "city_hopscotch.png",
+   "imagewidth": 24,
+   "imageheight": 64,
+   "properties": [
+    {
+     "name": "ground_detail",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "image": "shop_poster_lake.png",
+   "imagewidth": 24,
+   "imageheight": 30,
+   "properties": [
+    {
+     "name": "name",
+     "type": "string",
+     "value": "poster_lake"
+    }
+   ]
+  }
+ ]
+}

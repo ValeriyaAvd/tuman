@@ -1,0 +1,527 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Abandoned city",
+  "columns": 0,
+  "tilewidth": 32,
+  "tileheight": 56,
+  "objectalignment": "bottomleft",
+  "tilecount": 42,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../city_bin0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 1,
+      "image": "../city_bin1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 2,
+      "image": "../city_bin2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 3,
+      "image": "../city_barrel.png",
+      "imagewidth": 32,
+      "imageheight": 56,
+      "properties": [
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[[\"flame\", 16, 24]]"
+        },
+        {
+          "name": "light_pass",
+          "type": "int",
+          "value": 4
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 5,
+            "y": 45,
+            "width": 22,
+            "height": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "image": "../city_grass.png",
+      "imagewidth": 32,
+      "imageheight": 28,
+      "properties": []
+    },
+    {
+      "id": 5,
+      "image": "../city_fern.png",
+      "imagewidth": 32,
+      "imageheight": 28,
+      "properties": []
+    },
+    {
+      "id": 6,
+      "image": "../city_puddle.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "water"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../city_paper.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../city_poster.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../city_bottles.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../city_rubble.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../city_tire.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../city_graffiti.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../city_branch.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../city_oil.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../city_board.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../city_carbed_0_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../city_carbed_0_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "image": "../city_carbed_0_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "../city_carbed_0_3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "image": "../city_carbed_0_4.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "image": "../city_carbed_0_5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "image": "../city_carbed_1_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "image": "../city_carbed_1_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "image": "../city_carbed_1_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "image": "../city_carbed_1_3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "image": "../city_carbed_1_4.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "image": "../city_carbed_1_5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "image": "../city_carbed_2_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "image": "../city_carbed_2_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "image": "../city_carbed_2_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "image": "../city_carbed_2_3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "image": "../city_carbed_2_4.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "image": "../city_carbed_2_5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "image": "../city_lamp_flyer.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "image": "../city_fence_post.png",
+      "imagewidth": 4,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 26
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "image": "../city_gate.png",
+      "imagewidth": 96,
+      "imageheight": 48,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 45
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "image": "../city_fence_front.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 32
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "image": "../city_fence_side_l.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 39,
+      "image": "../city_fence_side_r.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 40,
+      "image": "../city_fence_join.png",
+      "imagewidth": 16,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 26
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "image": "../city_abyss_rim_top.png",
+      "imagewidth": 256,
+      "imageheight": 16,
+      "properties": []
+    }
+  ]
+}

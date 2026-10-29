@@ -1,0 +1,362 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Objects",
+  "tilewidth": 456,
+  "tileheight": 224,
+  "objectalignment": "bottomleft",
+  "columns": 0,
+  "tilecount": 10,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "house.png",
+      "imagewidth": 264,
+      "imageheight": 224,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "house"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 216
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[[\"window\", 16, 200], [\"window\", 44, 200], [\"window\", 100, 200]]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 0,
+            "y": 24,
+            "width": 256,
+            "height": 192
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "image": "shop.png",
+      "imagewidth": 456,
+      "imageheight": 224,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "shop"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 216
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[[\"window\", 224, 206]]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 0,
+            "y": 24,
+            "width": 448,
+            "height": 192
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "image": "shelf.png",
+      "imagewidth": 136,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "shelf"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 56
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 0,
+            "y": 24,
+            "width": 128,
+            "height": 32
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "image": "fridge.png",
+      "imagewidth": 104,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "fridge"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 56
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[[\"fridge\", 16, 30], [\"fridge\", 48, 30], [\"fridge\", 80, 30]]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 0,
+            "y": 24,
+            "width": 96,
+            "height": 32
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "image": "tree.png",
+      "imagewidth": 56,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "tree"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 64
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 22,
+            "y": 56,
+            "width": 12,
+            "height": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "image": "bush.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "bush"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 32
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 6,
+            "y": 22,
+            "width": 20,
+            "height": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "image": "lamp.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "lamp"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[[\"lamp\", 18, 10]]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 6,
+            "y": 60,
+            "width": 12,
+            "height": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "image": "lamp_broken.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "lamp_broken"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[[\"lamp_broken\", 18, 10]]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 6,
+            "y": 60,
+            "width": 12,
+            "height": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "image": "fence.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "fence"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 32
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 0,
+            "y": 22,
+            "width": 32,
+            "height": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "image": "car.png",
+      "imagewidth": 96,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "car"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 64
+        },
+        {
+          "name": "lights",
+          "type": "string",
+          "value": "[]"
+        }
+      ],
+      "objectgroup": {
+        "type": "objectgroup",
+        "objects": [
+          {
+            "id": 1,
+            "x": 0,
+            "y": 0,
+            "width": 96,
+            "height": 64
+          }
+        ]
+      }
+    }
+  ]
+}

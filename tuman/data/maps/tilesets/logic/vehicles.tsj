@@ -1,0 +1,33 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Vehicles",
+  "columns": 0,
+  "tilewidth": 96,
+  "tileheight": 64,
+  "objectalignment": "bottomleft",
+  "tilecount": 3,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../car_red.png",
+      "imagewidth": 96,
+      "imageheight": 64,
+      "properties": []
+    },
+    {
+      "id": 1,
+      "image": "../car_blue.png",
+      "imagewidth": 96,
+      "imageheight": 64,
+      "properties": []
+    },
+    {
+      "id": 2,
+      "image": "../car_tan.png",
+      "imagewidth": 96,
+      "imageheight": 64,
+      "properties": []
+    }
+  ]
+}

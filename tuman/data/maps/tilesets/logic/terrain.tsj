@@ -1,0 +1,426 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Terrain",
+  "tilewidth": 32,
+  "tileheight": 32,
+  "objectalignment": "bottomleft",
+  "columns": 0,
+  "tilecount": 18,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../grass_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "soft"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../grass_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "soft"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../asphalt_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../asphalt_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../pavement_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "pavement"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../pavement_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "pavement"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../floor_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../floor_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "floor"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../puddle_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "puddle"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "water"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../puddle_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "puddle"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "water"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../road_line_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "road_line"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../road_line_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "road_line"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../manhole_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "manhole"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../manhole_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "manhole"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../abyss_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "abyss"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../abyss_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "abyss"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../wall_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "wall"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../wall_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "wall"
+        },
+        {
+          "name": "ground",
+          "type": "string",
+          "value": "hard"
+        },
+        {
+          "name": "solid",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

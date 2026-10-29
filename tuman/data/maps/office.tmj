@@ -1,0 +1,1469 @@
+{
+ "type": "map",
+ "version": "1.10",
+ "tiledversion": "1.11.2",
+ "orientation": "orthogonal",
+ "renderorder": "right-down",
+ "infinite": false,
+ "width": 14,
+ "height": 10,
+ "tilewidth": 32,
+ "tileheight": 32,
+ "compressionlevel": -1,
+ "nextlayerid": 20,
+ "nextobjectid": 1158,
+ "properties": [
+  {
+   "name": "inside",
+   "type": "bool",
+   "value": true
+  }
+ ],
+ "tilesets": [
+  {
+   "firstgid": 1,
+   "source": "tilesets/interior.tsj"
+  },
+  {
+   "firstgid": 65,
+   "source": "tilesets/office.tsj"
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "Floor and walls",
+   "type": "tilelayer",
+   "width": 14,
+   "height": 10,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "data": [
+    17,
+    11,
+    11,
+    11,
+    11,
+    13,
+    11,
+    11,
+    11,
+    11,
+    13,
+    11,
+    11,
+    18,
+    17,
+    12,
+    12,
+    12,
+    12,
+    14,
+    12,
+    12,
+    12,
+    12,
+    14,
+    12,
+    12,
+    18,
+    17,
+    67,
+    67,
+    65,
+    68,
+    66,
+    65,
+    66,
+    65,
+    67,
+    68,
+    66,
+    68,
+    18,
+    17,
+    65,
+    66,
+    65,
+    66,
+    68,
+    67,
+    66,
+    68,
+    66,
+    65,
+    66,
+    68,
+    18,
+    17,
+    66,
+    66,
+    65,
+    65,
+    66,
+    66,
+    66,
+    66,
+    67,
+    67,
+    66,
+    66,
+    18,
+    17,
+    66,
+    66,
+    68,
+    67,
+    65,
+    67,
+    68,
+    66,
+    66,
+    67,
+    65,
+    67,
+    18,
+    17,
+    67,
+    65,
+    67,
+    65,
+    67,
+    67,
+    67,
+    68,
+    67,
+    66,
+    68,
+    68,
+    18,
+    17,
+    66,
+    65,
+    67,
+    65,
+    67,
+    68,
+    65,
+    68,
+    67,
+    68,
+    65,
+    68,
+    18,
+    17,
+    65,
+    66,
+    66,
+    65,
+    66,
+    68,
+    67,
+    67,
+    67,
+    68,
+    65,
+    67,
+    18,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    69,
+    0,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Wall shadows",
+   "type": "tilelayer",
+   "width": 14,
+   "height": 10,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "data": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    26,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    27,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    24,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    25,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Wall decor",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1001,
+     "name": "calendar",
+     "type": "",
+     "gid": 77,
+     "x": 142,
+     "y": 58,
+     "width": 20,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1002,
+     "name": "clippings",
+     "type": "",
+     "gid": 78,
+     "x": 236,
+     "y": 58,
+     "width": 44,
+     "height": 30,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1003,
+     "name": "raincoat",
+     "type": "",
+     "gid": 79,
+     "x": 318,
+     "y": 68,
+     "width": 18,
+     "height": 38,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1004,
+     "name": "switch",
+     "type": "",
+     "gid": 54,
+     "x": 300,
+     "y": 50,
+     "width": 9,
+     "height": 14,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1005,
+     "name": "vent",
+     "type": "",
+     "gid": 53,
+     "x": 60,
+     "y": 26,
+     "width": 18,
+     "height": 10,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1142,
+     "name": "wall_stain",
+     "type": "",
+     "gid": 85,
+     "x": 352,
+     "y": 40,
+     "width": 30,
+     "height": 30,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1143,
+     "name": "wall_stain",
+     "type": "",
+     "gid": 85,
+     "x": 104,
+     "y": 34,
+     "width": 30,
+     "height": 30,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1144,
+     "name": "key_board",
+     "type": "",
+     "gid": 83,
+     "x": 174,
+     "y": 52,
+     "width": 26,
+     "height": 22,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1145,
+     "name": "photo_frame",
+     "type": "",
+     "gid": 84,
+     "x": 290,
+     "y": 50,
+     "width": 16,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1146,
+     "name": "clock",
+     "type": "",
+     "gid": 52,
+     "x": 210,
+     "y": 30,
+     "width": 14,
+     "height": 14,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1147,
+     "name": "poster_missing",
+     "type": "",
+     "gid": 51,
+     "x": 118,
+     "y": 60,
+     "width": 22,
+     "height": 28,
+     "rotation": 0,
+     "visible": true
+    }
+   ],
+   "properties": [
+    {
+     "name": "ground",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Floor decor",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1006,
+     "name": "wet_trail",
+     "type": "",
+     "gid": 80,
+     "x": 212,
+     "y": 278,
+     "width": 40,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1007,
+     "name": "wet_trail",
+     "type": "",
+     "gid": 80,
+     "x": 170,
+     "y": 248,
+     "width": 40,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1008,
+     "name": "wet_trail",
+     "type": "",
+     "gid": 80,
+     "x": 128,
+     "y": 212,
+     "width": 40,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1009,
+     "name": "wet_trail",
+     "type": "",
+     "gid": 80,
+     "x": 92,
+     "y": 172,
+     "width": 40,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1010,
+     "name": "wet_trail",
+     "type": "",
+     "gid": 80,
+     "x": 56,
+     "y": 130,
+     "width": 40,
+     "height": 18,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1011,
+     "name": "stain_dark",
+     "type": "",
+     "gid": 60,
+     "x": 34,
+     "y": 168,
+     "width": 56,
+     "height": 26,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1012,
+     "name": "papers",
+     "type": "",
+     "gid": 62,
+     "x": 246,
+     "y": 196,
+     "width": 40,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1013,
+     "name": "papers",
+     "type": "",
+     "gid": 62,
+     "x": 300,
+     "y": 280,
+     "width": 40,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1139,
+     "name": "rug",
+     "type": "",
+     "gid": 81,
+     "x": 168,
+     "y": 206,
+     "width": 84,
+     "height": 40,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1140,
+     "name": "crumpled",
+     "type": "",
+     "gid": 87,
+     "x": 262,
+     "y": 236,
+     "width": 34,
+     "height": 16,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1141,
+     "name": "stain_dark",
+     "type": "",
+     "gid": 60,
+     "x": 360,
+     "y": 210,
+     "width": 56,
+     "height": 26,
+     "rotation": 0,
+     "visible": true
+    }
+   ],
+   "properties": [
+    {
+     "name": "ground",
+     "type": "bool",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Furniture",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1014,
+     "name": "rack",
+     "type": "",
+     "gid": 76,
+     "x": 346,
+     "y": 84,
+     "width": 66,
+     "height": 64,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1015,
+     "name": "desk",
+     "type": "",
+     "gid": 70,
+     "x": 166,
+     "y": 170,
+     "width": 92,
+     "height": 52,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1016,
+     "name": "chair",
+     "type": "",
+     "gid": 71,
+     "x": 200,
+     "y": 120,
+     "width": 24,
+     "height": 34,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1017,
+     "name": "cabinet",
+     "type": "",
+     "gid": 74,
+     "x": 78,
+     "y": 80,
+     "width": 26,
+     "height": 50,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1018,
+     "name": "cot",
+     "type": "",
+     "gid": 75,
+     "x": 336,
+     "y": 262,
+     "width": 74,
+     "height": 36,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1019,
+     "name": "boxes",
+     "type": "",
+     "gid": 43,
+     "x": 36,
+     "y": 278,
+     "width": 36,
+     "height": 32,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1020,
+     "name": "bucket",
+     "type": "",
+     "gid": 46,
+     "x": 76,
+     "y": 284,
+     "width": 18,
+     "height": 32,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1021,
+     "name": "bottle_crate",
+     "type": "",
+     "gid": 48,
+     "x": 318,
+     "y": 92,
+     "width": 24,
+     "height": 20,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1148,
+     "name": "newspaper_stack",
+     "type": "",
+     "gid": 82,
+     "x": 300,
+     "y": 182,
+     "width": 30,
+     "height": 30,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1149,
+     "name": "stool_kettle",
+     "type": "",
+     "gid": 86,
+     "x": 302,
+     "y": 266,
+     "width": 22,
+     "height": 34,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1150,
+     "name": "trash_bin",
+     "type": "",
+     "gid": 37,
+     "x": 268,
+     "y": 232,
+     "width": 16,
+     "height": 24,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1151,
+     "name": "bucket",
+     "type": "",
+     "gid": 46,
+     "x": 374,
+     "y": 222,
+     "width": 18,
+     "height": 32,
+     "rotation": 0,
+     "visible": true
+    },
+    {
+     "id": 1152,
+     "name": "boxes",
+     "type": "",
+     "gid": 43,
+     "x": 116,
+     "y": 290,
+     "width": 36,
+     "height": 32,
+     "rotation": 0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Safe closed",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1022,
+     "name": "safe_closed",
+     "type": "",
+     "gid": 72,
+     "x": 36,
+     "y": 84,
+     "width": 38,
+     "height": 46,
+     "rotation": 0,
+     "visible": true
+    }
+   ],
+   "properties": [
+    {
+     "name": "hide_if",
+     "type": "string",
+     "value": "office_safe_open"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Safe open",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1023,
+     "name": "safe_open",
+     "type": "",
+     "gid": 73,
+     "x": 36,
+     "y": 84,
+     "width": 38,
+     "height": 46,
+     "rotation": 0,
+     "visible": true
+    }
+   ],
+   "properties": [
+    {
+     "name": "show_if",
+     "type": "string",
+     "value": "office_safe_open"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Collisions",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1024,
+     "name": "wall",
+     "type": "collision",
+     "x": 0,
+     "y": 0,
+     "width": 448,
+     "height": 64,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    },
+    {
+     "id": 1025,
+     "name": "wall",
+     "type": "collision",
+     "x": 0,
+     "y": 64,
+     "width": 32,
+     "height": 224,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    },
+    {
+     "id": 1026,
+     "name": "wall",
+     "type": "collision",
+     "x": 416,
+     "y": 64,
+     "width": 32,
+     "height": 224,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    },
+    {
+     "id": 1027,
+     "name": "wall",
+     "type": "collision",
+     "x": 0,
+     "y": 288,
+     "width": 192,
+     "height": 32,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    },
+    {
+     "id": 1028,
+     "name": "wall",
+     "type": "collision",
+     "x": 256,
+     "y": 288,
+     "width": 192,
+     "height": 32,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "light_pass",
+       "type": "int",
+       "value": 16
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "name": "Spawns",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1029,
+     "name": "entry",
+     "type": "spawn",
+     "x": 224,
+     "y": 270,
+     "width": 0,
+     "height": 0,
+     "rotation": 0,
+     "visible": true,
+     "properties": [],
+     "point": true
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "name": "Doors",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1030,
+     "name": "door",
+     "type": "door",
+     "x": 192,
+     "y": 264,
+     "width": 64,
+     "height": 40,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "target",
+       "type": "string",
+       "value": "shop"
+      },
+      {
+       "name": "spawn",
+       "type": "string",
+       "value": "from_office"
+      },
+      {
+       "name": "facing",
+       "type": "string",
+       "value": "down"
+      },
+      {
+       "name": "hint",
+       "type": "string",
+       "value": "[E] вернуться в магазин"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "name": "Lights",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": []
+  },
+  {
+   "id": 11,
+   "name": "Story",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "objects": [
+    {
+     "id": 1031,
+     "name": "safe",
+     "type": "spot",
+     "x": 32,
+     "y": 78,
+     "width": 48,
+     "height": 28,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "safe"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": "Сейф. Тяжёлый, вмурован в пол."
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Кодовый замок, четыре цифры.\"]"
+      },
+      {
+       "name": "code",
+       "type": "string",
+       "value": "1708"
+      },
+      {
+       "name": "gives",
+       "type": "string",
+       "value": "park_key"
+      },
+      {
+       "name": "opened",
+       "type": "string",
+       "value": "[\"Внутри связка бумаг и ключ с биркой «ПАРК. Ворота».\", \"Бумаги — расписки. Все подписаны одним именем... и все датированы 17 августа.\"]"
+      },
+      {
+       "name": "flag",
+       "type": "string",
+       "value": "office_safe_open"
+      }
+     ]
+    },
+    {
+     "id": 1032,
+     "name": "desk",
+     "type": "spot",
+     "x": 160,
+     "y": 166,
+     "width": 104,
+     "height": 26,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "desk"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": "Стол хозяина. Лампа ещё горит."
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Под кружкой записка: «Код — тот день. Сначала число, потом месяц. Я его не забуду, даже если захочу».\", \"В журнале учёта последняя запись обрывается на середине слова.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1033,
+     "name": "calendar",
+     "type": "spot",
+     "x": 132,
+     "y": 64,
+     "width": 40,
+     "height": 24,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "calendar"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Календарь за август. Десять лет назад.\", \"Одно число обведено красным, несколько раз, до дыр в бумаге: 17.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1034,
+     "name": "clippings",
+     "type": "spot",
+     "x": 226,
+     "y": 64,
+     "width": 64,
+     "height": 24,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "clippings"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": "На стене газетные вырезки, связанные ниткой."
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Все статьи — про воду и туман. Одна вырезана аккуратнее остальных.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1035,
+     "name": "cabinet",
+     "type": "spot",
+     "x": 74,
+     "y": 76,
+     "width": 36,
+     "height": 26,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "cabinet"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Накладные, счета... Ящик «Персонал» пустой. Папки вынуты, будто их кто-то забрал.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1036,
+     "name": "cot",
+     "type": "spot",
+     "x": 330,
+     "y": 226,
+     "width": 86,
+     "height": 42,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "cot"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Раскладушка. Хозяин, похоже, жил здесь, не выходя наружу.\", \"Одеяло влажное. Пахнет тиной.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1037,
+     "name": "rack",
+     "type": "spot",
+     "x": 342,
+     "y": 76,
+     "width": 74,
+     "height": 26,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "rack"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Старое радио. Я покрутил ручку — сквозь шипение будто кто-то дышит.\", \"Консервы, свечи, вода в канистре. Он готовился не выходить долго.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1038,
+     "name": "raincoat",
+     "type": "spot",
+     "x": 310,
+     "y": 64,
+     "width": 34,
+     "height": 24,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "raincoat"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Дождевик. С подола до сих пор капает, хотя пол под ним сухой.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1039,
+     "name": "remark",
+     "type": "remark",
+     "x": 176,
+     "y": 224,
+     "width": 96,
+     "height": 64,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "text",
+       "type": "string",
+       "value": "Мокрые следы. Ведут от двери к сейфу... и обратно не возвращаются."
+      }
+     ]
+    },
+    {
+     "id": 1153,
+     "name": "key_board",
+     "type": "spot",
+     "x": 168,
+     "y": 64,
+     "width": 38,
+     "height": 24,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "key_board"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Доска для ключей. «Склад», «Подвал», «Парк», «Лодка».\", \"Крючок «Парк» пустой. Хозяин убрал этот ключ подальше.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1154,
+     "name": "photo",
+     "type": "spot",
+     "x": 278,
+     "y": 64,
+     "width": 32,
+     "height": 24,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "photo"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Фото: мужчина и маленькая девочка на берегу.\", \"На обороте подпись: «Аня. Последнее лето». Стекло треснуло изнутри.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1155,
+     "name": "newspapers",
+     "type": "spot",
+     "x": 292,
+     "y": 162,
+     "width": 46,
+     "height": 28,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "newspapers"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Подшивки «Голоса побережья». Последний номер — от 18 августа. Дальше газет нет.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1156,
+     "name": "kettle",
+     "type": "spot",
+     "x": 294,
+     "y": 244,
+     "width": 38,
+     "height": 30,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "kettle"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": ""
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Чайник полон воды. Мутной, с запахом тины.\"]"
+      }
+     ]
+    },
+    {
+     "id": 1157,
+     "name": "bucket",
+     "type": "spot",
+     "x": 360,
+     "y": 196,
+     "width": 50,
+     "height": 34,
+     "rotation": 0,
+     "visible": true,
+     "properties": [
+      {
+       "name": "kind",
+       "type": "string",
+       "value": "bucket"
+      },
+      {
+       "name": "approach",
+       "type": "string",
+       "value": "Сверху капает. Кап... кап..."
+      },
+      {
+       "name": "inspect",
+       "type": "string",
+       "value": "[\"Ведро под протечкой почти полное. Но этажом выше ничего нет — только крыша.\"]"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

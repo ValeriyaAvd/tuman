@@ -1,0 +1,212 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Objects",
+  "tilewidth": 456,
+  "tileheight": 224,
+  "objectalignment": "bottomleft",
+  "columns": 0,
+  "tilecount": 10,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../house.png",
+      "imagewidth": 264,
+      "imageheight": 224,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "house"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 216
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../shop.png",
+      "imagewidth": 456,
+      "imageheight": 224,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "shop"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 216
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../../../tiles/objects/shelf.png",
+      "imagewidth": 136,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "shelf"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 56
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../../../tiles/objects/fridge.png",
+      "imagewidth": 104,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "fridge"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 56
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../../../tiles/objects/tree.png",
+      "imagewidth": 56,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "tree"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 64
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "tree"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../../../tiles/objects/bush.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "bush"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 32
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "bush"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../../../tiles/objects/lamp.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "lamp"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "lamp"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../../../tiles/objects/lamp_broken.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "lamp_broken"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "lamp_broken"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../../../tiles/objects/fence.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "fence"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 32
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../../../tiles/objects/car.png",
+      "imagewidth": 96,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "car"
+        },
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 64
+        }
+      ]
+    }
+  ]
+}

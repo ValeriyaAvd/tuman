@@ -1,0 +1,1546 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Surfaces and transitions",
+  "tilewidth": 32,
+  "tileheight": 32,
+  "objectalignment": "bottomleft",
+  "columns": 0,
+  "tilecount": 118,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../../../tiles/terrain/grass_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / variant 2"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../../../tiles/terrain/grass_3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / variant 3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../../../tiles/terrain/asphalt_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / variant 2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../../../tiles/terrain/asphalt_3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / variant 3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../../../tiles/terrain/concrete_0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / variant 0"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../../../tiles/terrain/concrete_1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / variant 1"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../../../tiles/terrain/concrete_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / variant 2"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../../../tiles/terrain/concrete_3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / variant 3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../../../tiles/terrain/pavement_2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "pavement / variant 2"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../../../tiles/terrain/pavement_3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "pavement / variant 3"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../../../tiles/terrain/road_detail_7eb692861943.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../../../tiles/terrain/road_detail_e1828b172b6f.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../../../tiles/terrain/road_detail_2bc8e94ffd74.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../../../tiles/terrain/road_detail_94f831ccaee5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../../../tiles/terrain/road_detail_79c05b6e4604.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../../../tiles/terrain/road_detail_959e35c70517.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../../../tiles/terrain/road_detail_5a7410ee41d7.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../../../tiles/terrain/road_detail_7b451f49843c.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "image": "../../../tiles/terrain/road_detail_654051a7fad5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "../../../tiles/terrain/road_detail_df995c66ec3d.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "image": "../../../tiles/terrain/road_detail_94134f51e10f.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "image": "../../../tiles/terrain/road_detail_c4c047dee057.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "image": "../../../tiles/terrain/road_detail_b5c9d4ab0a96.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "image": "../../../tiles/terrain/road_detail_3b2318d1fde8.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "image": "../../../tiles/terrain/road_detail_155c2811e4f2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "image": "../../../tiles/terrain/road_detail_4b4a70b48da3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "image": "../../../tiles/terrain/road_detail_0cbdaf477483.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "image": "../../../tiles/terrain/road_detail_de514315b56b.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "image": "../../../tiles/terrain/road_detail_14bff7f43898.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "image": "../../../tiles/terrain/road_detail_47c76acc446e.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "image": "../../../tiles/terrain/road_detail_e71463d1adcb.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "image": "../../../tiles/terrain/road_detail_22b43dff24d8.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "image": "../../../tiles/terrain/road_detail_1b4d11f25f69.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "image": "../../../tiles/terrain/road_detail_76c4736f5577.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "image": "../../../tiles/terrain/road_detail_ae7083059bca.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "image": "../../../tiles/terrain/road_detail_58e43bc91b4f.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "image": "../../../tiles/terrain/road_detail_7c1277acab32.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Road marking / manhole decal"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "image": "../../../tiles/terrain/transitions/grass_cb5643ba96e5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "image": "../../../tiles/terrain/transitions/grass_7443e03d7202.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "image": "../../../tiles/terrain/transitions/grass_7443e03d7202.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "image": "../../../tiles/terrain/transitions/grass_ca75d1140b87.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "image": "../../../tiles/terrain/transitions/grass_7443e03d7202.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "image": "../../../tiles/terrain/transitions/grass_3e7abeb6ec62.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "image": "../../../tiles/terrain/transitions/asphalt_a79398e6f644.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "image": "../../../tiles/terrain/transitions/asphalt_ae2780f27d7e.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "image": "../../../tiles/terrain/transitions/asphalt_a79398e6f644.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "image": "../../../tiles/terrain/transitions/asphalt_ae2780f27d7e.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "image": "../../../tiles/terrain/transitions/grass_1daa0f9fd5f9.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "image": "../../../tiles/terrain/transitions/grass_2d95860336f2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "image": "../../../tiles/terrain/transitions/asphalt_febcab493632.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "image": "../../../tiles/terrain/transitions/grass_36628580f11e.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "image": "../../../tiles/terrain/transitions/asphalt_08d521424aa5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "image": "../../../tiles/terrain/transitions/grass_d0a1e7dd50f7.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "image": "../../../tiles/terrain/transitions/grass_2d95860336f2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "image": "../../../tiles/terrain/transitions/asphalt_9ab321bbe3fd.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "image": "../../../tiles/terrain/transitions/grass_2d95860336f2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "image": "../../../tiles/terrain/transitions/asphalt_08d521424aa5.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "image": "../../../tiles/terrain/transitions/asphalt_ecc7475a9009.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "image": "../../../tiles/terrain/transitions/asphalt_070c6dcf6186.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "image": "../../../tiles/terrain/transitions/asphalt_564d0a7b7007.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "image": "../../../tiles/terrain/transitions/asphalt_070c6dcf6186.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "image": "../../../tiles/terrain/transitions/asphalt_8f3970697fe3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "image": "../../../tiles/terrain/transitions/asphalt_7b56830868ba.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "asphalt / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "image": "../../../tiles/terrain/transitions/grass_21bfa147da1e.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "image": "../../../tiles/terrain/transitions/concrete_15aa955770ca.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "image": "../../../tiles/terrain/transitions/concrete_982048c4f783.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "image": "../../../tiles/terrain/transitions/concrete_f2bea664c81a.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "image": "../../../tiles/terrain/transitions/concrete_95210f99a433.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "image": "../../../tiles/terrain/transitions/concrete_51ff86980ce6.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "image": "../../../tiles/terrain/transitions/grass_83cf2498842c.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "image": "../../../tiles/terrain/transitions/grass_e662def32cda.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "image": "../../../tiles/terrain/transitions/concrete_fc5c67dd3b52.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "image": "../../../tiles/terrain/transitions/grass_36628580f11e.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "image": "../../../tiles/terrain/transitions/grass_94586de663a8.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "image": "../../../tiles/terrain/transitions/grass_edb89f532b24.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "image": "../../../tiles/terrain/transitions/concrete_f3eee192fb56.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "image": "../../../tiles/terrain/transitions/concrete_c87743fc3d7a.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 169,
+      "image": "../../../tiles/terrain/transitions/concrete_222a85e442d6.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 170,
+      "image": "../../../tiles/terrain/transitions/concrete_c87743fc3d7a.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 172,
+      "image": "../../../tiles/terrain/transitions/grass_36628580f11e.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 173,
+      "image": "../../../tiles/terrain/transitions/grass_80cce9e718b7.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 174,
+      "image": "../../../tiles/terrain/transitions/grass_61a899b9c8ec.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 175,
+      "image": "../../../tiles/terrain/transitions/concrete_9b931a83ea0a.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 176,
+      "image": "../../../tiles/terrain/transitions/grass_fbb6f1e5b40b.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 177,
+      "image": "../../../tiles/terrain/transitions/grass_b20da1f44cb4.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 178,
+      "image": "../../../tiles/terrain/transitions/grass_e59e4926a0a9.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 179,
+      "image": "../../../tiles/terrain/transitions/grass_f81adf5e9057.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 180,
+      "image": "../../../tiles/terrain/transitions/grass_65cc1c1a6dbf.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 181,
+      "image": "../../../tiles/terrain/transitions/grass_2d95860336f2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 183,
+      "image": "../../../tiles/terrain/transitions/grass_94586de663a8.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 184,
+      "image": "../../../tiles/terrain/transitions/grass_5c2e78f02ace.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 186,
+      "image": "../../../tiles/terrain/transitions/grass_12ea22c02697.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 187,
+      "image": "../../../tiles/terrain/transitions/grass_94e36b42f9c8.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 188,
+      "image": "../../../tiles/terrain/transitions/grass_83f2ef1cb636.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 189,
+      "image": "../../../tiles/terrain/transitions/grass_931182064418.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "image": "../../../tiles/terrain/transitions/grass_eaac3e63f2b9.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 196,
+      "image": "../../../tiles/terrain/transitions/grass_c4b402ac2431.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 197,
+      "image": "../../../tiles/terrain/transitions/grass_61a899b9c8ec.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 198,
+      "image": "../../../tiles/terrain/transitions/concrete_e0d6116162c8.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 199,
+      "image": "../../../tiles/terrain/transitions/concrete_f9a120fce4e1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 200,
+      "image": "../../../tiles/terrain/transitions/concrete_a81398751fa8.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 201,
+      "image": "../../../tiles/terrain/transitions/grass_36ec0baea8bb.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 202,
+      "image": "../../../tiles/terrain/transitions/grass_df4a087fe307.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 203,
+      "image": "../../../tiles/terrain/transitions/concrete_4bdc31f5411f.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 204,
+      "image": "../../../tiles/terrain/transitions/concrete_e969d8d78b26.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 205,
+      "image": "../../../tiles/terrain/transitions/grass_820f5fb9b7ea.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 208,
+      "image": "../../../tiles/terrain/transitions/concrete_e1382c2143f3.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 211,
+      "image": "../../../tiles/terrain/transitions/grass_c4ed7b8b324c.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 215,
+      "image": "../../../tiles/terrain/transitions/concrete_a338c3d2282a.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 219,
+      "image": "../../../tiles/terrain/transitions/grass_6b7ccfe0b097.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 220,
+      "image": "../../../tiles/terrain/transitions/concrete_891e811fcaf1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 221,
+      "image": "../../../tiles/terrain/transitions/concrete_b7ec2717c5ea.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 222,
+      "image": "../../../tiles/terrain/transitions/concrete_1501f2270073.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "concrete / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 224,
+      "image": "../../../tiles/terrain/transitions/grass_83cf2498842c.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 225,
+      "image": "../../../tiles/terrain/transitions/grass_f81adf5e9057.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 226,
+      "image": "../../../tiles/terrain/transitions/grass_fa7d7f707eb7.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 227,
+      "image": "../../../tiles/terrain/transitions/grass_65cc1c1a6dbf.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    },
+    {
+      "id": 228,
+      "image": "../../../tiles/terrain/transitions/grass_0c1d4196ea05.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "grass / rounded material edge"
+        }
+      ]
+    }
+  ]
+}

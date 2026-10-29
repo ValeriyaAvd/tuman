@@ -1,0 +1,232 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Abandoned city",
+  "columns": 0,
+  "tilewidth": 32,
+  "tileheight": 56,
+  "objectalignment": "bottomleft",
+  "tilecount": 18,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../../../tiles/city/city_bin0.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 1,
+      "image": "../../../tiles/city/city_bin1.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 2,
+      "image": "../../../tiles/city/city_bin2.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": []
+    },
+    {
+      "id": 3,
+      "image": "../../../tiles/city/city_barrel.png",
+      "imagewidth": 32,
+      "imageheight": 56,
+      "properties": [
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "fire"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../../../tiles/city/city_grass.png",
+      "imagewidth": 32,
+      "imageheight": 28,
+      "properties": [
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "grass"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../../../tiles/city/city_fern.png",
+      "imagewidth": 32,
+      "imageheight": 28,
+      "properties": [
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "bush"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../../../tiles/city/city_puddle.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": []
+    },
+    {
+      "id": 7,
+      "image": "../../../tiles/city/city_paper.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "paper"
+        },
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../../../tiles/city/city_poster.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../../../tiles/city/city_bottles.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../../../tiles/city/city_rubble.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../../../tiles/city/city_tire.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../../../tiles/city/city_graffiti.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../../../tiles/city/city_branch.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../../../tiles/city/city_oil.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../../../tiles/city/city_board.png",
+      "imagewidth": 32,
+      "imageheight": 24,
+      "properties": [
+        {
+          "name": "ground_detail",
+          "type": "bool",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "image": "../../../tiles/city/city_lamp_flyer.png",
+      "imagewidth": 24,
+      "imageheight": 68,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 68
+        },
+        {
+          "name": "motion",
+          "type": "string",
+          "value": "lamp"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "image": "../../../tiles/city/city_fence_post.png",
+      "imagewidth": 4,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "sort_y",
+          "type": "int",
+          "value": 26
+        }
+      ]
+    }
+  ]
+}

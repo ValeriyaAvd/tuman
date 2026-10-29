@@ -1,0 +1,311 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "Architecture, curbs and perimeter",
+  "tilewidth": 32,
+  "tileheight": 32,
+  "objectalignment": "bottomleft",
+  "columns": 0,
+  "tilecount": 23,
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../../../tiles/architecture/house_288x224_moss.png",
+      "imagewidth": 288,
+      "imageheight": 224,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Abandoned house"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../../../tiles/architecture/house_256x224_moss.png",
+      "imagewidth": 256,
+      "imageheight": 224,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Abandoned house"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../../../tiles/architecture/house_256x192_slate.png",
+      "imagewidth": 256,
+      "imageheight": 192,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Abandoned house"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../../../tiles/architecture/house_256x224_slate.png",
+      "imagewidth": 256,
+      "imageheight": 224,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Abandoned house"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../../../tiles/architecture/house_288x192_slate.png",
+      "imagewidth": 288,
+      "imageheight": 192,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Abandoned house"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../../../tiles/architecture/shop_front.png",
+      "imagewidth": 448,
+      "imageheight": 192,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Abandoned shop"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../../../tiles/architecture/curb_11.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../../../tiles/architecture/curb_10.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../../../tiles/architecture/curb_13.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../../../tiles/architecture/curb_05.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../../../tiles/architecture/curb_04.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../../../tiles/architecture/curb_06.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../../../tiles/architecture/curb_12.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../../../tiles/architecture/curb_01.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../../../tiles/architecture/curb_08.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../../../tiles/architecture/curb_02.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../../../tiles/architecture/curb_14.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../../../tiles/architecture/curb_09.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "image": "../../../tiles/architecture/curb_03.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "../../../tiles/architecture/curb_15.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Raised curb"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "image": "../../../tiles/objects/fence.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Perimeter fence / horizontal"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "image": "../../../tiles/architecture/fence_vertical.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Perimeter fence / vertical"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "image": "../../../tiles/architecture/fence_corner.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": "Perimeter fence / corner"
+        }
+      ]
+    }
+  ]
+}

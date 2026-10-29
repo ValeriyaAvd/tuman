@@ -1,0 +1,634 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "World",
+  "tilewidth": 32,
+  "tileheight": 32,
+  "columns": 0,
+  "tilecount": 89,
+  "tiles": [
+    {
+      "id": 702,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0702.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 703,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0703.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 704,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0704.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 705,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0705.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 706,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0706.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 707,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0707.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 708,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0708.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 768,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0768.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 769,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0769.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 770,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0770.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 771,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0771.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 772,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0772.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 832,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0832.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 833,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0833.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 834,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0834.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 835,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0835.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 836,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0836.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 894,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0894.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 895,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0895.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 896,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0896.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 897,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0897.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 898,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0898.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 899,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0899.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 900,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0900.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 959,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0959.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 960,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0960.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 961,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0961.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 962,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0962.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 963,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0963.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 964,
+      "properties": [],
+      "image": "../../../tiles/world/tile_0964.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1024,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1024.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1025,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1025.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1026,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1026.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1027,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1027.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1028,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1028.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1087,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1087.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1088,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1088.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1089,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1089.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1090,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1090.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1091,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1091.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1092,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1092.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1152,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1152.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1153,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1153.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1154,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1154.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1155,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1155.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1156,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1156.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1216,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1216.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1217,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1217.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1218,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1218.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1219,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1219.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 1220,
+      "properties": [],
+      "image": "../../../tiles/world/tile_1220.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2127,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2127.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2128,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2128.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2129,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2129.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2130,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2130.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2131,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2131.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2132,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2132.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2133,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2133.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2134,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2134.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2135,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2135.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2136,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2136.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2137,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2137.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2138,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2138.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2139,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2139.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2140,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2140.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2141,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2141.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2160,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2160.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2168,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2168.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2169,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2169.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2170,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2170.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2171,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2171.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2174,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2174.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2175,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2175.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2176,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2176.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2177,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2177.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2196,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2196.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2197,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2197.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2198,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2198.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2199,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2199.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2202,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2202.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2203,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2203.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2204,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2204.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2205,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2205.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2210,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2210.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2224,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2224.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2232,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2232.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2233,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2233.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2234,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2234.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    },
+    {
+      "id": 2265,
+      "properties": [],
+      "image": "../../../tiles/world/tile_2265.png",
+      "imagewidth": 32,
+      "imageheight": 32
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "gameplay_sha256": {
+    "office": "42f128333d97bf700c152c4f078503bae0fb1a0926a7d3fda3271d2badd3361d",
+    "shop": "febbe19cd150016c88770afff26a6249e0907e0a8a7a7c67861d946c304429ad",
+    "street": "a281b2eee66d29f8cd45776bf555a17bd8623dab8041e4af6b6fd29e169f7088"
+  },
+  "runtime_python_sha256": {
+    "atmosphere.py": "df2fc2f24e5a953e65800c796529f20a8da106bc700b4c4c4ac805c24b408de2",
+    "characters.py": "f581f88b4b5b00ce1c89df9135461c8c1e12cf89f03c83017d9dd333b143128a",
+    "environment.py": "3dfce6db01ec8cbe65149c2552b57b9a7c241d732747f2bc881b93081f8ba9f9",
+    "lighting.py": "33bcc8f896ca352653fd55fd8d257dd9332ab0be0f8f84306f38749f35e39de0",
+    "locations.py": "7d4f607738babb5d5209ecec5fc59056812d02a17ff8d6499eee518fbfd94b04",
+    "main.py": "3afe89ecebdc8076ee892dc25947f0f36074418a342e91b56c882d0b086910f0",
+    "rendering.py": "0c4f272075882165ab443afe8b72f1c34299ac5be76ab922dd1b29764b18f18d",
+    "settings.py": "bcd5aa71605ddcfef37c7a6f97391d2bd018f866fdf4f6e16b48fee3cb79ea75",
+    "sounds.py": "3bd7a22749f5cb6fb04f4bbce6da8edaa4f80b1835269a47d23748b48adedd62",
+    "story.py": "968b373d31d30cdb889a862ff65c625ff4adedf9daaa82256005ca152e1b0706",
+    "texts.py": "e8ebe4c70e9dba221c9b81568a4232a6013c130b0f5c4b7420274bc450ed6aae",
+    "tiled_map.py": "c772dba67482cb4c2876d09790756a329b897df80c0d2d4cbf113b68140b7a12",
+    "ui.py": "31ae8c4cd82bd95ca9611b8e870d05a4495b45d80ec9d0b8c31a44ce21263641",
+    "world.py": "333224c9b553a27fe97a75c33269f8158417c19a31fa36ebb1e472c12d2b8b33"
+  },
+  "protected_art_sha256": {
+    "data/maps/tilesets/fir_big.png": "42ee4f44819f58d8744ac05c297fc6ba1aada7ac7d9da4e1fee23bc2222926e4",
+    "data/maps/tilesets/fir_mid.png": "5457fa92aaea659346d46502f1e57033cee4fb059fa54575bf8fe21e93c41f00",
+    "data/maps/tilesets/fir_small.png": "4b5c3919f8c08fefeb7de407b7d2f312c0d6546aee95241434646f907561cd93",
+    "data/maps/tilesets/city_hopscotch.png": "087b07310024ed56bddc7fc654bf6893e58c47ea0f678fe05d36a227fbdd650c",
+    "data/maps/tilesets/city_notice_board.png": "512ab6a80b0dd7d0d5c9b7979cb1c53b127565ceea4c3caaece513248760942c",
+    "data/maps/tilesets/shop_poster_lake.png": "71eb8c8bc880970205ad4ae280f49554ad69eedbccd45276e18d6c78c9188913",
+    "data/maps/tilesets/office.png": "c336490d8fa67cdd4ecbd285ef951a6f7d29f52494ca27e049613910f74d20cb"
+  },
+  "sprite_sources": [
+    "hero.png",
+    "monster.png",
+    "exclaim.png"
+  ]
+}
